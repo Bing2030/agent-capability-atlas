@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Agent 技术能力地图：从传统软件工程走向 Agent Platform Engineering、Agentic AI Engineering、Harness、模型系统与后训练的决策级参考。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://bing2030.github.io/agent-capability-atlas/">
+<meta property="og:title" content="Agent 技术能力地图 · 决策级参考版">
+<meta property="og:description" content="Agent Platform、Agentic AI、Harness 与相邻专业的完整能力地图，包含 JD 证据、迁移矩阵、面试信号和一手来源。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bing2030.github.io/agent-capability-atlas/">
+<title>Agent 技术能力地图 · 决策级参考版</title>
+<style>
+:root{--bg:#f6f7f4;--panel:#fff;--ink:#17191c;--ink2:#40444b;--muted:#717780;--line:#e2e4df;--strong:#c9cdc5;--a:#245f88;--as:#eaf2f7;--b:#92502e;--bs:#f8eee7;--c:#236c57;--cs:#e9f3ee;--warn:#835900;--ws:#fbf3df;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;--sb:270px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.72 var(--sans);-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer}a{color:var(--a)}
+#prog{position:fixed;left:0;top:0;height:2px;background:var(--a);z-index:100;width:0}aside{position:fixed;inset:0 auto 0 0;width:var(--sb);background:#fbfcf9;border-right:1px solid var(--line);padding:25px 0 18px;display:flex;flex-direction:column;z-index:50}.brand{padding:0 22px 16px;border-bottom:1px solid var(--line)}.brand b{font-size:13px}.brand div{font:10px var(--mono);color:var(--muted);margin-top:4px}nav{padding:14px 12px;overflow:auto;flex:1}nav a{display:flex;gap:9px;padding:6px 10px;border-radius:6px;color:var(--ink2);text-decoration:none;font-size:13px;line-height:1.4;border-left:2px solid transparent}nav a span{font:10px var(--mono);color:var(--muted)}nav a.active{background:#eef1ec;border-left-color:var(--a);color:var(--ink)}.sidefoot{padding:12px 22px 0;border-top:1px solid var(--line);font:10px/1.6 var(--mono);color:var(--muted)}main{margin-left:var(--sb)}.wrap{max-width:1160px;margin:auto;padding:0 44px 70px}section{padding-top:48px;scroll-margin-top:16px}h1{font-size:40px;line-height:1.17;letter-spacing:-.025em;margin:0 0 15px}h1 em{font-style:normal;color:var(--a)}h2{font-size:26px;line-height:1.3;letter-spacing:-.015em;margin:0 0 12px}h3{font-size:17px;margin:0 0 10px}p{margin:9px 0;color:var(--ink2)}.hero{padding:58px 0 26px;border-bottom:1px solid var(--line)}.kicker,.eyebrow{font:10px var(--mono);letter-spacing:.13em;color:var(--a);text-transform:uppercase}.hero .eyebrow{margin-bottom:16px}.lede{font-size:16px;max-width:850px;line-height:1.8}.meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;color:var(--muted);font:10px var(--mono)}.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);margin-top:25px}.stat{padding:17px 19px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{display:block;font-size:25px;line-height:1.15}.stat span{font-size:11px;color:var(--muted)}.tools{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.btn{border:1px solid var(--strong);background:var(--panel);border-radius:6px;padding:6px 11px;font-size:12px;color:var(--ink2);text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.btn:hover,.btn.on{border-color:var(--a);color:var(--a);background:var(--as)}.search{min-width:230px;flex:1;border:1px solid var(--strong);border-radius:6px;background:var(--panel);padding:7px 11px;color:var(--ink)}.callout{border:1px solid var(--line);border-left:3px solid var(--a);background:var(--panel);padding:15px 19px;margin:18px 0;border-radius:0 8px 8px 0;font-size:13.5px}.callout.warn{border-left-color:var(--warn);background:var(--ws)}.callout.green{border-left-color:var(--c);background:var(--cs)}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:17px 18px}.card h3{font-size:14px}.card p{font-size:12.5px;color:var(--muted)}.card.a{border-top:3px solid var(--a)}.card.b{border-top:3px solid var(--b)}.card.c{border-top:3px solid var(--c)}.mono{font-family:var(--mono)}.small{font-size:12px;color:var(--muted)}.num{font:10px var(--mono);color:var(--a);letter-spacing:.1em}.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--muted);margin:12px 0}.dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}.da{background:var(--a)}.db{background:var(--b)}.dc{background:var(--c)}
+.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--panel);font-size:12.5px;table-layout:fixed}th,td{padding:10px 11px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}th{text-align:left;background:#f0f2ed;color:var(--ink2);font-weight:600}tr:last-child td{border-bottom:0}.pill{display:inline-block;border-radius:4px;padding:2px 6px;font:9.5px var(--mono);white-space:normal}.pa{background:var(--as);color:var(--a)}.pb{background:var(--bs);color:var(--b)}.pc{background:var(--cs);color:var(--c)}.pw{background:var(--ws);color:var(--warn)}
+.btag{display:inline-block;font:8px var(--mono);padding:1px 3px;border-radius:3px;margin-left:4px;vertical-align:1px;white-space:nowrap}.btag.broad{background:var(--ws);color:var(--warn);border:1px solid #e8d5ae}.btag.lit{background:var(--cs);color:var(--c);border:1px solid #c2ddd3}.fid{display:inline-block;font:9px var(--mono);padding:1px 5px;border-radius:3px;white-space:nowrap}.fid.h{background:var(--cs);color:var(--c);border:1px solid #c2ddd3}.fid.m{background:var(--ws);color:var(--warn);border:1px solid #e8d5ae}.fid.l{background:#f1eeea;color:var(--muted);border:1px solid var(--line)}
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:16px 18px}.row{display:grid;grid-template-columns:190px 1fr 86px;gap:12px;align-items:center;padding:6px 0;font-size:12px}.bar{height:12px;background:#eef0eb;border-radius:3px;overflow:hidden}.fill{height:100%;background:var(--a);border-radius:3px}.val{text-align:right;font:10.5px var(--mono);color:var(--ink2)}.stack{border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--panel)}.lay{display:grid;grid-template-columns:48px 180px 1fr 120px;border-bottom:1px solid var(--line)}.lay:last-child{border:0}.lay>div{padding:11px 13px}.ln{font:11px var(--mono);color:var(--muted);border-right:1px solid var(--line)}.lt{font-weight:650;font-size:13px;border-right:1px solid var(--line)}.ld{font-size:12px;color:var(--ink2)}.lo{border-left:1px solid var(--line);font-size:10px}.branch{border:1px solid var(--line);border-radius:10px;background:var(--panel);margin:15px 0;overflow:hidden}.bh{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:14px 16px;background:#fafbf8;border-bottom:1px solid var(--line)}.code{font:11px var(--mono);font-weight:700;padding:5px 7px;text-align:center;border-radius:5px}.branch.A .code{background:var(--as);color:var(--a)}.branch.B .code{background:var(--bs);color:var(--b)}.branch.C .code{background:var(--cs);color:var(--c)}.bt{font-size:14px;font-weight:650}.bd{font-size:11.5px;color:var(--muted)}.heat{font:9.5px var(--mono);color:var(--muted);text-align:right}.leaf+.leaf{border-top:1px solid #eef0eb}.lb{width:100%;display:grid;grid-template-columns:24px 1fr auto;gap:8px;align-items:center;text-align:left;border:0;background:transparent;padding:10px 16px;color:var(--ink)}.lb:hover{background:#fafbf8}.tw{font:12px var(--muted);transition:transform .15s}.leaf.open .tw{transform:rotate(90deg)}.nm{font-size:13px}.nm span{font:10px var(--mono);color:var(--muted);margin-left:8px}.jd{font:9.5px var(--mono);color:var(--muted)}.dt{display:none;padding:0 16px 14px 48px}.leaf.open .dt{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}.dl{font:9px var(--mono);letter-spacing:.1em;color:var(--a);margin-bottom:3px}.dcopy{font-size:12px;line-height:1.65;color:var(--ink2)}.refs{grid-column:1/-1;border-top:1px dashed var(--line);padding-top:8px;font-size:10.5px;color:var(--muted)}.refs a{margin-right:10px}.empty{display:none;padding:24px;text-align:center;color:var(--muted)}
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.level{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--a);border-radius:8px;padding:15px}.level:nth-child(2){border-top-color:var(--c)}.level:nth-child(3){border-top-color:var(--b)}.level:nth-child(4){border-top-color:var(--warn)}.level h3{font:12px var(--mono)}.level p{font-size:12px}.phase{display:grid;grid-template-columns:110px 1fr;gap:16px;position:relative;padding:0 0 20px 18px;border-left:1px solid var(--strong)}.phase:before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;background:var(--a);border-radius:50%}.pwk{font:11px var(--mono);color:var(--a)}.pbody{font-size:13px}.pbody b{display:block}.srcs{font-size:11px}.srcs td:first-child{font-family:var(--mono)}.foot{border-top:1px solid var(--line);margin-top:35px;padding-top:18px;font-size:11px;color:var(--muted)}.printonly{display:none}
+@media(max-width:1000px){:root{--sb:215px}.wrap{padding-left:28px;padding-right:28px}.grid3{grid-template-columns:1fr}.ladder{grid-template-columns:1fr 1fr}.row{grid-template-columns:155px 1fr 78px}}
+@media(max-width:700px){aside{display:none}main{margin:0;min-width:0}.wrap{padding:0 18px 45px;min-width:0}h1{font-size:31px}h2{font-size:23px}.hero .eyebrow{overflow-wrap:anywhere}.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.tools .search{grid-column:1/-1;width:100%;min-width:0}.tools .btn{width:100%;padding-left:5px;padding-right:5px;font-size:11px}.stats,.grid2{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.lay{grid-template-columns:42px 1fr;padding:10px}.lay>div{padding:3px 6px}.ln{grid-row:1/3;border:0}.lt{border:0}.ld{grid-column:2}.lo{grid-column:2;border:0}.row{grid-template-columns:112px minmax(0,1fr) 68px;gap:7px;font-size:10px}.val{font-size:9px}.dt{grid-template-columns:1fr;padding-left:38px}.refs{grid-column:1}.bh{grid-template-columns:45px 1fr}.heat{grid-column:2;text-align:left}.ladder{grid-template-columns:1fr}.phase{grid-template-columns:1fr;gap:3px}.nm span{display:block;margin-left:0}.jd{display:none}th,td{padding:8px;font-size:11px}}
+@media print{body{background:#fff;font-size:11px}aside,#prog,.tools{display:none!important}main{margin:0}.wrap{max-width:none;padding:0}.hero{padding-top:0}section{padding-top:25px}.card,.level,.lay,.leaf,.callout,tr{break-inside:avoid}.branch{break-inside:auto}.dt{display:grid!important}.leaf.open .dt{display:grid}.tw{display:none}.refs a{color:#333;text-decoration:none}.printonly{display:block}a{color:inherit;text-decoration:none}.chart,.branch,.card,.stack{box-shadow:none}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<aside>
+  <div class="brand"><b>AGENT CAPABILITY ATLAS</b><div>DECISION-GRADE / FINAL</div></div>
+  <nav>
+    <a href="#s01"><span>01</span>执行摘要与使用方式</a><a href="#s02"><span>02</span>JD 证据与纠错</a><a href="#s03"><span>03</span>系统全景与责任接口</a><a href="#s03b"><span>03·5</span>Harness 视图</a><a href="#s04"><span>04</span>A · 平台工程能力树</a><a href="#s05"><span>05</span>B · Agentic 工程能力树</a><a href="#s06"><span>06</span>C · 相邻专业</a><a href="#s07"><span>07</span>迁移与面试信号</a><a href="#s08"><span>08</span>成熟度与作品集</a><a href="#s09"><span>09</span>选型与反模式</a><a href="#s10"><span>10</span>来源与方法</a>
+  </nav>
+  <div class="sidefoot">CORPUS: 25 JD / CORE VIEW: 22<br>UPDATED: 2026-10-28<br>PRIMARY-SOURCE FIRST<br>SELF-CONTAINED HTML</div>
+</aside>
+<main><div class="wrap">
+<header class="hero">
+  <div class="eyebrow">Agent Platform / Agentic AI / Adjacent Specializations</div>
+  <h1>Agent 技术能力地图<br><em>决策级参考版</em></h1>
+  <p class="lede">给传统软件工程师的一张可执行地图：从熟悉的契约、隔离、调度、检索、可观测性出发，理解 Agent 平台、Agentic 应用、Harness、模型系统与后训练之间的完整边界。每个节点包含传统锚点、示例验收、JD 证据与一手技术入口；本图同时提供完整迁移矩阵、面试信号和 Harness 专视图。</p>
+  <div class="meta"><span>CORPUS SHA256 dac3b442…f79</span><span>VISIBILITY ≠ REQUIREMENT</span><span>EXAMPLES ≠ UNIVERSAL THRESHOLDS</span></div>
+  <div class="stats"><div class="stat"><b>2 + 3</b><span>核心轨道 + 相邻专业</span></div><div class="stat"><b id="branchCount">18</b><span>能力分支</span></div><div class="stat"><b id="nodeCount">—</b><span>可追溯能力节点</span></div><div class="stat"><b id="sourceCount">—</b><span>一手来源入口</span></div></div>
+</header>
+<section id="s01">
+  <div class="kicker">01 / SCOPE & READING GUIDE</div><h2>这不是岗位分类学，而是工程责任地图</h2>
+  <div class="callout green"><strong>本图的定位：</strong>把「证据、全景、行动」放在同一张图上。A/B 是两条核心学习轨道，C 是必须纳入全景的相邻专业；Harness 作为跨 A/B 的第一等工程视图单独展开。真实岗位经常混合这些责任，尤其是 Harness、平台架构师与负责人岗。</div>
+  <h3>先读这五条</h3>
+  <div class="grid3">
+    <div class="card a"><h3>01 · 评测是工程，不是刷榜</h3><p>15/25 岗提及评测，但原文要的是任务集、badcase 归因、回归和线上闭环。能读懂一条失败轨迹，比会背一个榜单分数更值钱。</p></div>
+    <div class="card b"><h3>02 · Harness 是组织，不是包装</h3><p>它把模型、工具、上下文、状态、执行环境和反馈组织成可交付行为。模型是外部常数；Harness 是多数应用团队真正能控制的变量。</p></div>
+    <div class="card a"><h3>03 · 平台交付制品，Agentic 交付行为</h3><p>平台的成功单位是「第 N 个团队仍能稳定运行」；Agentic 的成功单位是「真实任务分布上的完成率与成本」。两者接口必须显式。</p></div>
+    <div class="card"><h3>04 · 传统能力是入场券，不是差异化</h3><p>契约、幂等、隔离、可观测、多租户仍然有效。真正稀缺的是非确定性调试、语义正确性判定和每成功任务成本。</p></div>
+    <div class="card c"><h3>05 · 模型系统与 RL 是相邻专业</h3><p>推理服务、后训练与 Agentic RL 不应被塞进平台树，也不能从全景消失。理解接口与成本，按岗位选择深度。</p></div>
+    <div class="card"><h3>使用方式</h3><p>自查节点 → 对岗选树 → 做出制品。不要按「读完」验收，按「能拿出证据」验收。</p></div>
+  </div>
+  <h3>按可用时间选择阅读路径</h3>
+  <table><colgroup><col style="width:16%"><col style="width:38%"><col style="width:46%"></colgroup><tr><th>时间</th><th>读什么</th><th>读完应能回答</th></tr>
+    <tr><td class="mono">15 MIN</td><td>01 执行摘要 → 02 证据 → 03 全景 → 03·5 Harness</td><td>这个岗位在市场里大致属于哪条树？它的核心失败面是什么？</td></tr>
+    <tr><td class="mono">60 MIN</td><td>03·5 Harness → 目标轨道 A/B → 07 迁移矩阵</td><td>我现有能力能迁移到哪，缺的三件事是什么？</td></tr>
+    <tr><td class="mono">REFERENCE</td><td>用搜索框查节点；按 JD 编号或技术名回溯</td><td>一个具体能力如何验收、对应哪些 JD、去哪里读一手资料？</td></tr>
+  </table>
+  <div class="grid3">
+    <div class="card a"><h3>A · Agent Platform Engineering</h3><p>让 Agent 可运行、可隔离、可恢复、可治理、可度量。主责执行环境、任务运行时、协议网关、平台控制面、身份策略、可观测和评测基础设施。</p></div>
+    <div class="card b"><h3>B · Agentic AI Engineering</h3><p>让 Agent 在目标任务上有效、可靠、经济、可迭代。主责任务建模、模型与策略选择、上下文与记忆、工具语义、质量科学、产品行为和反馈闭环。</p></div>
+    <div class="card c"><h3>C · Adjacent Specializations</h3><p>模型服务与推理、后训练与 Agentic RL、产品及组织领导力。它们不是附属知识；在对应岗位中就是主战场，但不需要每位平台工程师都达到同等深度。</p></div>
+  </div>
+  <h3 style="margin-top:24px">如何读每个节点</h3>
+  <table><colgroup><col style="width:17%"><col style="width:83%"></colgroup><tr><th>字段</th><th>含义</th></tr><tr><td>传统锚点</td><td>可以复用的既有工程心智；同时也会指出类比在哪里失效。</td></tr><tr><td>示例验收</td><td>用于学习或作品集的实验设计，不是跨行业发布阈值。样本量、风险等级、SLO 和统计置信度必须按业务校准。</td></tr><tr><td>JD</td><td>该节点在语料中的相关岗位编号，只表示相关证据，不代表每份 JD 都使用同一术语或把它列为硬性要求。</td></tr><tr><td>Sources</td><td>优先给规范、官方文档或官方工程文章。协议和框架快速变化，落地时应重新确认版本。</td></tr></table>
+</section>
+<section id="s02">
+  <div class="kicker">02 / EVIDENCE & CORRECTIONS</div><h2>JD 可见度：只回答「出现了多少岗」</h2>
+  <p>下表由随附的 <span class="mono">jd-capability-evidence.py</span> 重新生成。先清除组标题，再按岗位计数；核心视图排除 #19（产品）、#24（RL 研究）、#25（通用模型系统），仅用于敏感性对照，不代表这些方向不重要。</p>
+  <div class="legend"><span><i class="dot da"></i>全部 25 岗</span><span>右侧同时显示核心 22 岗</span><span><span class="btag broad">BROAD</span> 广义词族，需结合上下文</span><span><span class="btag lit">LITERAL</span> 字面匹配</span></div>
+  <div class="chart" id="evidenceChart"></div>
+  <div class="callout warn"><strong>禁止从这张图直接推出：</strong>硬性要求比例、市场份额、技能薪资溢价或学习优先级。它只说明这份便利样本中的术语可见度。岗位目标、业务风险和既有能力才决定学习顺序。</div>
+  <h3>传统基础能力的字面核查</h3>
+  <table><colgroup><col style="width:25%"><col style="width:15%"><col style="width:60%"></colgroup><tr><th>术语</th><th>岗位数</th><th>正确解释</th></tr><tr><td>Kubernetes</td><td class="mono">2 / 25</td><td>只在 #3、#11 明写；不能再用「K8s/云原生」混合词族替代字面计数。</td></tr><tr><td>微服务</td><td class="mono">3 / 25</td><td>#2、#3、#18。</td></tr><tr><td>中间件</td><td class="mono">5 / 25</td><td>#2、#3、#5、#9、#22。</td></tr><tr><td>Harness</td><td class="mono">6 / 25</td><td>#2、#6、#13、#14、#16、#17。不同 JD 中 Harness 语义不完全相同，不再做提及密度排名。</td></tr></table>
+  <h3>证据口径：这张图如何避免误读</h3>
+  <table><colgroup><col style="width:30%"><col style="width:70%"></colgroup><tr><th>常见误读</th><th>本图的处理</th></tr><tr><td>关键词出现多就是硬性要求</td><td>只称「JD 可见度」，不把提及升级为 required / core responsibility。</td></tr><tr><td>组标题、重复文本导致计数漂移</td><td>先清除组标题，按岗位计数；附可复现脚本与语料 SHA-256。</td></tr><tr><td>榜单分数等于生产能力</td><td>不引用不稳定榜单分数；验收按任务、风险和自有留出集校准。</td></tr><tr><td>把行业武断分成两种岗位</td><td>两条核心轨道 + 三个相邻专业，并增加按制品划分的责任接口。</td></tr><tr><td>模型系统、RL、AI Coding 不属于地图</td><td>作为相邻专业 C1/C2 与节点 B8 显式纳入；多模态进入 B7，领导力进入 C3。</td></tr><tr><td>广义词族与字面词混在一起比较</td><td>证据图每一行标注 <span class="btag broad">BROAD</span> 或 <span class="btag lit">LITERAL</span>，避免把两类数字直接比较。</td></tr></table>
+</section>
+<section id="s03">
+  <div class="kicker">03 / SYSTEM MAP & OWNERSHIP</div><h2>全景不是严格分层，而是控制面相交</h2>
+  <p>以下九层帮助定位能力，不代表请求只能逐层经过。安全、成本、评测和身份是横切关注点；模型服务与后训练可独立成平台。</p>
+  <div class="stack" id="stack"></div>
+  <h3 style="margin-top:26px">按制品划分责任，而不是按岗位名称</h3>
+  <table><colgroup><col style="width:19%"><col style="width:17%"><col style="width:24%"><col style="width:40%"></colgroup><tr><th>制品 / 决策</th><th>主责</th><th>协作</th><th>接口与验收重点</th></tr>
+    <tr><td>沙箱与执行环境</td><td><span class="pill pa">A</span></td><td>B 定义任务需求；安全团队审查</td><td>威胁模型、隔离边界、镜像与依赖、出口、凭证、资源配额、销毁语义。</td></tr>
+    <tr><td>Agent 循环与停止策略</td><td><span class="pill pb">B</span></td><td>A 提供运行时与策略执行点</td><td>状态模型、最大步数/预算、暂停与恢复、人工接管、终止原因可观测。</td></tr>
+    <tr><td>工具契约</td><td><span class="pill pc">A + B</span></td><td>业务 API 与安全团队</td><td>B 负责可理解、可选择的语义；A 负责鉴权、版本、限流、审计和传输。</td></tr>
+    <tr><td>记忆模式与保留策略</td><td><span class="pill pb">B</span></td><td>A 提供存储、租户与合规能力</td><td>写入来源、正确性、用户纠正/删除、保留期、检索权限、记忆中毒测试。</td></tr>
+    <tr><td>评测任务与评分标准</td><td><span class="pill pb">B</span></td><td>领域专家、产品、A</td><td>真实任务分布、可判定结果、正例/反例、人工校准、任务集版本。</td></tr>
+    <tr><td>评测运行器与发布门禁</td><td><span class="pill pa">A</span></td><td>B 定义指标与风险门槛</td><td>环境隔离、模型/工具/配置固定、试验编排、结果存储、CI 集成、可审计比较。</td></tr>
+    <tr><td>模型服务与推理 SLO</td><td><span class="pill pc">C1</span></td><td>A 做接入治理；B 评估质量</td><td>TTFT、TPOT、吞吐、可用性、成本、模型/引擎版本和质量回归。</td></tr>
+    <tr><td>后训练与模型-Harness 协同</td><td><span class="pill pc">C2</span></td><td>B 提供任务与轨迹；A 提供数据/执行基建</td><td>数据血缘、奖励与环境、污染控制、离线与在线评测、安全回滚。</td></tr>
+    <tr><td>产品组合与自治边界</td><td><span class="pill pc">C3 + B</span></td><td>A/C1/C2 提供成本与能力约束</td><td>业务价值、风险等级、采用率、人工接管、退出机制、团队责任。</td></tr>
+  </table>
+</section>
+<section id="s03b">
+  <div class="kicker">03·5 / HARNESS LENS</div><h2>Harness：把模型能力组织成可交付行为</h2>
+  <p>Harness 不是某个框架，也不是 Prompt wrapper，而是「从目标到最终环境状态」的运行时组织。它把模型、工具、上下文、状态、执行环境和反馈组织成可交付行为。</p>
+  <div class="callout green"><strong>一句话：</strong>模型决定「可能做什么」，Harness 决定「这次实际做什么、做完没有、失败怎么办」。对多数应用团队，模型是外部依赖，Harness 才是可控制、可评测、可迭代的工程对象。</div>
+  <div class="grid3">
+    <div class="card b"><h3>01 · Loop &amp; termination</h3><p>目标、计划、行动、观察、停止条件、预算与人工接管。主责 B；运行时执行点由 A 提供。</p><p class="small"><span class="pill pb">B</span> 制品：循环策略 + 终止原因 + 运行清单</p></div>
+    <div class="card b"><h3>02 · Model &amp; prompt contract</h3><p>模型选择、指令层级、结构化输出、模型路由与版本。主责 B；推理服务与容量由 C1 提供。</p><p class="small"><span class="pill pb">B</span> 制品：模型/Prompt manifest + 输出契约</p></div>
+    <div class="card a"><h3>03 · Tools &amp; skills</h3><p>工具语义、Schema、Skill、MCP、A2A、注册、鉴权、版本与供应链。A 主契约与网关，B 主可用性。</p><p class="small"><span class="pill pc">A + B</span> 制品：工具契约 + Skill 包 + 权限策略</p></div>
+    <div class="card a"><h3>04 · Context &amp; memory</h3><p>写、选、压、隔离；工作态、长期记忆、检索和用户纠正。A 主存储与租户，B 主写什么与选什么。</p><p class="small"><span class="pill pc">A + B</span> 制品：上下文预算 + 记忆模式 + 删除路径</p></div>
+    <div class="card a"><h3>05 · Execution &amp; recovery</h3><p>沙箱、文件系统、浏览器、检查点、幂等、重试、暂停、恢复与销毁。</p><p class="small"><span class="pill pa">A</span> 制品：隔离环境 + 恢复演练 + 副作用台账</p></div>
+    <div class="card a"><h3>06 · Eval &amp; telemetry</h3><p>任务集、轨迹、最终状态、评分器、重复试验、线上反馈和发布门禁。</p><p class="small"><span class="pill pc">A + B</span> 制品：评测报告 + 可回放 trace + 回归门禁</p></div>
+  </div>
+  <h3>Harness 的失效面与责任归属</h3>
+  <table><colgroup><col style="width:18%"><col style="width:34%"><col style="width:13%"><col style="width:35%"></colgroup><tr><th>失效面</th><th>典型症状</th><th>主责</th><th>先做哪个制品</th></tr>
+    <tr><td>循环不收敛</td><td>重复调用、预算耗尽、做完了还在做，或永远不结束。</td><td><span class="pill pb">B2 / A2</span></td><td>步数上限、循环检测、预算、终止原因与取消传播。</td></tr>
+    <tr><td>任务假成功</td><td>回答声称完成，但数据库、文件或外部系统没有正确最终状态。</td><td><span class="pill pb">B6</span></td><td>最终状态断言优先于文本评分；轨迹与 outcome 分开评。</td></tr>
+    <tr><td>恢复重复副作用</td><td>进程崩溃后重试，重复发信、扣款、写单或调用外部 API。</td><td><span class="pill pa">A2</span></td><td>幂等键、事务边界、outbox/inbox、记录回放与人工对账。</td></tr>
+    <tr><td>注入与数据外泄</td><td>网页、工具描述或检索文档中的指令改变目标；敏感数据被带出。</td><td><span class="pill pa">A1 / A5</span></td><td>威胁模型、默认拒绝出口、凭证代理、关键路径红队测试。</td></tr>
+    <tr><td>模型升级回归</td><td>换模型或 Prompt 后，行为、工具选择、成本或安全边界漂移。</td><td><span class="pill pc">A5 / A7 / B6</span></td><td>固定模型/Prompt/工具 manifest，灰度比较，过评测门禁再放量。</td></tr>
+  </table>
+  <div class="callout"><strong>Harness is not a framework:</strong> LangGraph、OpenAI Agents SDK、Claude Agent SDK、ADK 等是实现选择；Harness 的验收面是<strong>可观察的任务行为</strong>，不是你是否用了某个图、某个角色或某个中间件。先把行为与失败面写清楚，再选实现。</div>
+</section>
+<section id="s04"><div class="kicker">04 / TRACK A</div><h2>Agent Platform Engineering</h2><p>平台不是把传统微服务换成 Agent 名称。新增难点是：模型参与控制流、执行不受信动作、轨迹成为调试对象、质量与成本共同进入发布门禁。</p><div id="treeA"></div></section>
+<section id="s05"><div class="kicker">05 / TRACK B</div><h2>Agentic AI Engineering</h2><p>Agentic 工程不是 Prompt 编写。核心是把开放任务转化为可约束的决策系统，并用轨迹、实验和产品信号持续证明系统是否变好。</p><div id="treeB"></div></section>
+<section id="s06"><div class="kicker">06 / ADJACENT SPECIALIZATIONS</div><h2>相邻专业：全景中不可缺失的三块</h2><p>这些方向可作为独立职业路径。平台或 Agentic 工程师至少需要理解其接口、成本与质量约束，但不必全部深入实现。</p><div id="treeC"></div></section>
+<section id="s07">
+  <div class="kicker">07 / MIGRATION & INTERVIEW</div><h2>从既有优势进入，而不是从零开始</h2>
+  <table><colgroup><col style="width:20%"><col style="width:28%"><col style="width:25%"><col style="width:27%"></colgroup><tr><th>传统背景</th><th>优先节点</th><th>首个作品</th><th>必须重学的部分</th></tr>
+    <tr><td>后端 / 分布式</td><td>A2、A3、A4、B3</td><td>带持久化、幂等工具和恢复机制的 Agent 服务</td><td>非确定性、轨迹质量、模型/提示配置作为发布单元</td></tr>
+    <tr><td>SRE / K8s / 安全</td><td>A1、A2、A5、A6</td><td>可攻击、可观测、可销毁的沙箱执行平台</td><td>不受信内容会操纵控制流；可用性不等于任务成功</td></tr>
+    <tr><td>应用 / 全栈</td><td>B1、B5、B7、B8</td><td>有人工接管、领域评测和真实用户流程的 Agent</td><td>任务采样、语义评分、自治边界、失败体验</td></tr>
+    <tr><td>搜索 / 数据 / 推荐</td><td>B4、B6、C2</td><td>带权限、反馈和记忆纠正的知识型 Agent</td><td>记忆与检索不是同一层；轨迹数据会成为训练资产</td></tr>
+    <tr><td>ML Systems</td><td>C1、C2、A6、B6</td><td>模型 × Harness 的质量-延迟-成本联合评测</td><td>环境副作用、长任务恢复、工具语义、线上行为</td></tr>
+    <tr><td>技术负责人 / EM</td><td>C3、B6、B7、A5</td><td>有风险分级、ROI、退出机制和团队责任的服务组合</td><td>从功能交付转为概率系统经营；组织能力也是交付物</td></tr>
+  </table>
+  <h3>完整迁移矩阵：15 个传统能力 → Agent 对应物</h3>
+  <p class="small">保真度是旧经验可直接复用的程度，不是能力等级：<span class="fid h">高</span> 可立即复用；<span class="fid m">中</span> 需要重新设计边界；<span class="fid l">低</span> 必须从零建立肌肉记忆。</p>
+  <table><colgroup><col style="width:21%"><col style="width:24%"><col style="width:9%"><col style="width:46%"></colgroup><tr><th>传统 SWE 能力</th><th>Agent 时代的对应物</th><th>保真度</th><th>你必须重学的那部分</th></tr>
+    <tr><td><b>REST / RPC 服务设计</b></td><td>Tool / MCP Server</td><td><span class="fid h">高</span></td><td>接口读者从人变成模型：description 与 schema 写含糊，就是一个必然发生的 bug。</td></tr>
+    <tr><td><b>OpenAPI 契约治理</b></td><td>Tool Schema 治理</td><td><span class="fid h">高</span></td><td>版本与弃用要考虑模型可能缓存旧 schema；危险工具需要默认审批标记。</td></tr>
+    <tr><td><b>事务与幂等</b></td><td>Checkpoint + 幂等工具调用</td><td><span class="fid m">中</span></td><td>状态是显式、可分支、可回放的；恢复靠事件重放而非回滚，副作用必须自己保证幂等。</td></tr>
+    <tr><td><b>工作流引擎 / MQ</b></td><td>Durable Agent Runtime</td><td><span class="fid m">中</span></td><td>DAG 不能完全预编译——下一步由模型决定；引擎要支持运行中改变计划。</td></tr>
+    <tr><td><b>容器 / K8s 编排</b></td><td>microVM / 沙箱编排</td><td><span class="fid h">高</span></td><td>威胁模型从「你写的可信代码」变成「别人写的敌意代码」；共享内核不再是默认假设。</td></tr>
+    <tr><td><b>缓存设计</b></td><td>Prompt / KV / 工具目录缓存</td><td><span class="fid m">中</span></td><td>前缀稳定性直接决定成本；缓存断点放在哪是架构决策，不是配置项。</td></tr>
+    <tr><td><b>IAM / RBAC</b></td><td>Agent 身份 + OBO + 凭证代理</td><td><span class="fid m">中</span></td><td>需要「代表用户行事但权限严格小于用户」；还要防「单次合法、序列非法」（读 + 外发）。</td></tr>
+    <tr><td><b>日志 / APM</b></td><td>OTel GenAI Trace + Transcript</td><td><span class="fid h">高</span></td><td>span 里多了一层「意图与决策」语义；内容字段默认敏感，采集即合规决策。</td></tr>
+    <tr><td><b>单元测试</b></td><td>Eval Set + 轨迹 / 状态断言</td><td><span class="fid m">中</span></td><td>断言对象从「输出」变成「路径与最终状态」；同一输入不保证同一输出，需重复试验。</td></tr>
+    <tr><td><b>性能优化</b></td><td>质量 / 时延 / 成本三维优化</td><td><span class="fid l">低</span></td><td>三者互相拉扯；成本单位是 token、工具和执行时长，失败任务照样烧钱。</td></tr>
+    <tr><td><b>Code Review</b></td><td>Transcript / Trajectory Review</td><td><span class="fid l">低</span></td><td>全新技能：读 Agent 的思考与试错轨迹，从「它试了 6 次才对」里判断是模型、工具还是环境问题。</td></tr>
+    <tr><td><b>灰度发布</b></td><td>灰度 + 模型版本回归</td><td><span class="fid m">中</span></td><td>换模型等于换了一个不确定的上游依赖，行为漂移只能靠 eval 捕获，不能靠 diff。</td></tr>
+    <tr><td><b>多租户 SaaS</b></td><td>多租户 Agent 平台</td><td><span class="fid h">高</span></td><td>新增两条租户边界：记忆的内存边界、凭证的注入边界。串一次就是事故。</td></tr>
+    <tr><td><b>编译期类型检查</b></td><td>结构化输出 + 校验 / 修复回合</td><td><span class="fid m">中</span></td><td>校验发生在运行时；失败不是抛异常，而是要设计一个可观测、可停止的修复回合。</td></tr>
+    <tr><td><b>前端状态机</b></td><td>流式 UI + 可中断交互</td><td><span class="fid m">中</span></td><td>用户可能中途改主意、断连、反悔；Agent 要能接住并保留现场，而不是从头再来。</td></tr>
+  </table>
+  <h3>高保真迁移与必须新增的直觉</h3>
+  <div class="grid2"><div class="card"><h3>可以直接复用</h3><p>API/Schema 契约、幂等键、事件溯源、事务与补偿、IAM/OBO、限流配额、分布式追踪、缓存、灰度回滚、多租户、容量规划、SRE 事故响应。</p></div><div class="card"><h3>必须新增</h3><p>模型行为评估、间接提示注入与最小自治、上下文信息经济学、轨迹阅读、LLM Judge 校准、重复试验统计、模型-Harness 联合归因、每成功任务成本。</p></div></div>
+  <div class="callout"><strong>传统类比最容易误导的地方：</strong>传统服务也会静默返回业务错误，Agent 也会 P99 超时；差异不是「旧系统确定、新系统随机」这么简单，而是模型现在参与决策、工具路径和上下文构造，导致质量、成本与副作用都呈路径依赖。</div>
+  <h3>面试信号：把 JD 原话翻译成你要拿出的证据</h3>
+  <p class="sub" style="margin-bottom:8px">面试官通常不会问「你懂不懂 Agent」，而是用一句 JD 原话追问具体经历。按「问题 → 证据 → 节点」准备故事，比背概念有效。</p>
+  <table><colgroup><col style="width:35%"><col style="width:23%"><col style="width:26%"><col style="width:16%"></colgroup><tr><th>JD 里的原话（节选）</th><th>实际会问什么</th><th>你要拿出的证据</th><th>对应节点</th></tr>
+    <tr><td>「能基于 Trace、评测结果及用户反馈持续优化 Agent」</td><td>讲一次你的 Agent 为什么失败，你怎么定位的</td><td>一条具体 trace + 归因结论 + 修复后的回归数据</td><td class="mono">A6 · B6</td></tr>
+    <tr><td>「让『越用越好』从口号变成机制」</td><td>你的 badcase 怎么变成不重复犯</td><td>badcase → 规则/技能 → 回归用例 的闭环样例</td><td class="mono">B8 · B6</td></tr>
+    <tr><td>「保障长程 Agent 任务的稳定性与可恢复性」</td><td>进程挂了、断连了、跑了六小时，怎么办</td><td>检查点设计 + 幂等策略 + 恢复演练记录</td><td class="mono">A2</td></tr>
+    <tr><td>「围绕容器、虚拟机或轻量级 Sandbox 完善隔离」</td><td>为什么不用普通容器，逃逸你怎么防</td><td>选型三轴论证 + 一次红队验证结果</td><td class="mono">A1</td></tr>
+    <tr><td>「把业务约束转化为可执行规则、把任务状态转化为过程制品」</td><td>你怎么把一句模糊需求变成可执行的东西</td><td>一份规格或状态机设计，附落地效果</td><td class="mono">B2 · B7</td></tr>
+    <tr><td>「在信息保真与成本之间取得平衡」</td><td>上下文快满了你怎么处理，压掉了什么</td><td>压缩策略前后成功率、时延与成本对比</td><td class="mono">B3</td></tr>
+    <tr><td>「把模型、工具、存储等外部依赖抽象为插件，实现热插拔」</td><td>你怎么让换模型/换工具不改业务代码</td><td>一层抽象的设计与它的泄漏点</td><td class="mono">A3 · A4</td></tr>
+    <tr><td>「技能注册、版本管理、权限控制、调用契约」</td><td>一千个工具塞给模型，怎么不乱</td><td>检索式工具加载 + 权限围栏的设计</td><td class="mono">A3 · B5</td></tr>
+    <tr><td>「是 Agent 产品的高强度用户，对模型行为有品味」</td><td>你最近一次被 Agent 惊艳/气到是什么事</td><td>真实的、带细节的一手使用观察</td><td class="mono">B1 · B7</td></tr>
+    <tr><td>「构建 Agent 自进化、经验学习、自动评测」</td><td>你有没有让系统自己变好的机制</td><td>一个真正跑起来的自动化回路，哪怕很小</td><td class="mono">B8 · B6</td></tr>
+  </table>
+</section>
+<section id="s08">
+  <div class="kicker">08 / MATURITY & PORTFOLIO</div><h2>用可复核证据定义成熟度</h2>
+  <div class="ladder"><div class="level"><h3>T1 · EXPLAIN</h3><p>能画出一次任务的模型、工具、状态、身份、轨迹与副作用；知道 MCP、A2A、Skills、Runtime、Memory 和 Eval 各自解决什么。</p></div><div class="level"><h3>T2 · BUILD</h3><p>做出单 Agent 纵切片：有结构化工具、持久化、人工接管、基础追踪和任务集；不是只有聊天 UI。</p></div><div class="level"><h3>T3 · OPERATE</h3><p>能处理重试风暴、重复副作用、上下文膨胀、模型变更、注入攻击和成本异常；用实验和线上信号共同判断质量。</p></div><div class="level"><h3>T4 · LEAD</h3><p>定义跨团队接口、风险分级、投资优先级和组织责任；能证明为何采用或不采用多 Agent、自研平台或后训练。</p></div></div>
+  <h3 style="margin-top:25px">12–16 周参考路线：每阶段产生可检查制品</h3>
+  <div class="phase"><div class="pwk">W01–02</div><div class="pbody"><b>任务与风险基线</b>选一个真实、边界清晰的任务。定义成功、失败、风险等级、人工接管、任务分布和成本模型。制品：任务说明书 + 风险登记册 + 初版评测集。</div></div>
+  <div class="phase"><div class="pwk">W03–04</div><div class="pbody"><b>单 Agent 纵切片</b>完成模型-工具-结果循环，加入结构化输出、错误语义、trace 和最终状态校验。制品：可运行服务 + 失败轨迹库。</div></div>
+  <div class="phase"><div class="pwk">W05–07</div><div class="pbody"><b>持久化、隔离与恢复</b>实现幂等、检查点、超时/预算、沙箱、出口控制。分别演示崩溃恢复、记录回放与实时重跑，不混称确定性。制品：故障演练报告。</div></div>
+  <div class="phase"><div class="pwk">W08–10</div><div class="pbody"><b>上下文与质量实验</b>比较上下文/记忆策略、模型或 Harness 配置；固定版本，重复试验，报告均值、pass@1/pass^k（按需）、置信区间、成本和延迟。制品：实验报告 + 原始结果。</div></div>
+  <div class="phase"><div class="pwk">W11–12</div><div class="pbody"><b>生产信任与发布</b>加入 OBO、序列策略、租户隔离、红队、灰度与回滚。门槛由业务风险决定。制品：威胁模型 + 发布门禁 + 回滚演练。</div></div>
+  <div class="phase"><div class="pwk">W13–16</div><div class="pbody"><b>按方向专精</b>平台选 A1/A2；Agentic 选 B2/B4/B7；模型系统选 C1；研究选 C2；负责人选 C3。制品：一次有基线、有反证、有「不采用」结论的架构决策。</div></div>
+</section>
+<section id="s09">
+  <div class="kicker">09 / SELECTION & ANTI-PATTERNS</div><h2>框架选型：先确定控制需求，再看生态</h2>
+  <table><colgroup><col style="width:23%"><col style="width:32%"><col style="width:45%"></colgroup><tr><th>选项示例</th><th>优先验证</th><th>不要只凭名称假设</th></tr>
+    <tr><td>LangGraph / LangChain</td><td>显式状态图、持久化、人工介入、语言生态</td><td>检查当前版本的执行与存储语义；图可控不等于自动获得幂等和隔离。</td></tr>
+    <tr><td>OpenAI Agents SDK</td><td>Agent loop、handoff、工具与追踪的集成方式</td><td>确认模型提供方、会话持久化和部署边界是否满足你的需求。</td></tr>
+    <tr><td>Claude Agent SDK</td><td>复用成熟 Harness、工具权限、编码/长任务场景</td><td>内置工具仍需隔离、出口、凭证和审计；不要把托管抽象当安全边界。</td></tr>
+    <tr><td>Google ADK / Microsoft Agent Framework</td><td>云生态、企业语言、工作流与部署集成</td><td>评估可移植性、版本迁移、既有 IAM/可观测体系的复用程度。</td></tr>
+    <tr><td>AgentScope / Spring AI</td><td>Java 与企业应用集成</td><td>不要只比较 API 数量；验证状态、恢复、评测与运维接口。</td></tr>
+    <tr><td>Dify 等可视化平台</td><td>快速产品化、非工程角色协作、托管运维</td><td>确认复杂控制流、私有协议、低层调试与数据治理是否可扩展。</td></tr>
+  </table>
+  <p class="small">统一选型评分：任务适配、状态与恢复、工具/协议、人工接管、可观测、评测、隔离与身份、模型可移植性、部署、团队语言、总拥有成本。用同一任务纵切片做 2–3 个候选的可重复比较。</p>
+  <h3 style="margin-top:25px">八个仍然成立的反模式</h3>
+  <table><colgroup><col style="width:27%"><col style="width:73%"></colgroup><tr><th>反模式</th><th>修正</th></tr>
+    <tr><td>先上 Multi-Agent，再找理由</td><td>先证明任务有可并行、可隔离或超出单上下文的部分；同时测量协调成本和失败传播。</td></tr>
+    <tr><td>把 Prompt 当普通文本配置</td><td>将模型、Prompt、工具 Schema、Skills、检索配置和 Harness 一起版本化并评测。</td></tr>
+    <tr><td>排行榜直接决定生产选型</td><td>先比较任务相似度、污染、评分器、Harness、成本和日期；最终使用自有任务集。</td></tr>
+    <tr><td>有容器就有安全边界</td><td>从威胁模型选择隔离、出口、凭证和策略；对高风险不受信代码单独评估 microVM/VM。</td></tr>
+    <tr><td>有 Checkpoint 就能确定性回放</td><td>区分状态恢复、记录回放和实时重跑；记录模型/工具 I/O 并处理外部副作用。</td></tr>
+    <tr><td>LLM Judge 上线即可信</td><td>用人工标注校准，报告一致性和偏差，定期抽检并防止被评分器投机。</td></tr>
+    <tr><td>只压每次调用 token 单价</td><td>优化每成功任务总成本：模型、重试、工具、沙箱、存储、网络、人工复核与失败损失。</td></tr>
+    <tr><td>把「不采用」当技术失败</td><td>有实验依据地不采用多 Agent、长期记忆、自研框架或后训练，往往是最成熟的架构结论。</td></tr>
+  </table>
+</section>
+<section id="s10">
+  <div class="kicker">10 / SOURCES & REPRODUCIBILITY</div><h2>来源登记：一条事实对应一类证据</h2>
+  <p>所有链接均为规范、官方文档、官方工程文章或官方代码/基准仓库。这里不使用二手文章支撑协议状态、产品功能或性能常数。访问日期：2026-10-28。</p>
+  <div class="callout green"><strong>文档约定：</strong>本图包含 Harness 专视图、15 行完整迁移矩阵、JD 原话 → 面试问题 → 证据表；证据图逐行标注 BROAD / LITERAL；每个能力节点都附 JD 编号与一手技术入口。</div>
+  <div class="tablewrap"><table class="srcs" id="sourceTable"><colgroup><col style="width:14%"><col style="width:25%"><col style="width:14%"><col style="width:47%"></colgroup><tr><th>ID</th><th>来源</th><th>类型</th><th>用于支撑</th></tr></table></div>
+  <h3>JD 方法的可复现边界</h3>
+  <div class="callout"><strong>运行：</strong><span class="mono">python3 jd-capability-evidence.py 目标JD标准库-Agent平台与负责人岗.md --pretty</span><br>脚本包含完整正则、岗位编号、核心视图排除项和限制说明。语料 SHA-256 为 <span class="mono">dac3b44268f2eab14bf2561c5399392b21cf8f0128abee9adfb6efc925738f79</span>。若 JD 文件改变，图表必须重新生成。</div>
+  <div class="callout warn"><strong>仍然存在的限制：</strong>25 份 JD 不是行业随机样本；中文大模型公司占比高；正则词族不能替代逐条语义编码；能力节点中的示例验收是教学设计，不是行业合规标准；官方规范也会继续演进。</div>
+  <div class="foot">Agent Capability Atlas · Decision-grade edition · Built from 25 JD records and primary technical sources. Includes the Harness view, migration matrix, interview evidence, and source register.<br>Living document · <a href="https://github.com/Bing2030/agent-capability-atlas">GitHub repository</a> · <a href="assets/agent-capability-atlas.pdf">PDF edition</a></div>
+</section>
+</div></main>
+<script>
+const SOURCES={
+mcp:{name:"MCP 2026-07-28 release",type:"官方规范",url:"https://blog.modelcontextprotocol.io/posts/2026-07-28/",use:"无状态核心、header routing、MRTR、Tasks 扩展、CIMD/DCR 变化"},
+a2a:{name:"A2A v1.0.0 Specification",type:"官方规范",url:"https://a2a-protocol.org/v1.0.0/specification",use:"Agent Card、JWS/JCS 签名、任务与认证、安全边界"},
+skills:{name:"Agent Skills Specification",type:"官方规范",url:"https://agentskills.io/specification",use:"SKILL.md、渐进披露、约 100 token 元数据与正文 <5000 token 建议"},
+otel:{name:"OpenTelemetry GenAI Observability",type:"官方文档",url:"https://opentelemetry.io/blog/2026/genai-observability/",use:"invoke_agent、chat、execute_tool 轨迹结构与内容采集的隐私默认"},
+otelrepo:{name:"OTel semantic-conventions-genai",type:"官方仓库",url:"https://github.com/open-telemetry/semantic-conventions-genai",use:"GenAI/MCP 语义约定仍在 Development，需固定版本"},
+firecracker:{name:"Firecracker",type:"官方文档",url:"https://firecracker-microvm.github.io/",use:"microVM 隔离模型；性能必须在自有工作负载测量"},
+gvisor:{name:"gVisor",type:"官方文档",url:"https://gvisor.dev/docs/",use:"用户态内核、系统调用拦截与兼容性/开销权衡"},
+kata:{name:"Kata Containers (GitHub)",type:"官方仓库",url:"https://github.com/kata-containers/kata-containers",use:"容器接口与 VM 隔离组合；文档站 404，改用官方仓库"},
+owasp:{name:"OWASP AI Agent and MCP Security",type:"官方指南",url:"https://owasp.github.io/DevSecOpsGuideline/2-Process/2-2-Develop/2-2-5-AI-Agent-and-MCP-Security",use:"最小自治、间接注入、凭证、出口、工具供应链与沙箱"},
+eval:{name:"Anthropic · Demystifying evals for AI agents",type:"官方工程",url:"https://www.anthropic.com/research/demystifying-evals-for-ai-agents",use:"任务、trial、grader、outcome、pass@k/pass^k 与评测集维护"},
+multi:{name:"Anthropic · Multi-agent research system",type:"官方工程",url:"https://www.anthropic.com/engineering/built-multi-agent-research-system",use:"多 Agent 适用条件、协调成本；4x/15x 只属于其特定工作负载"},
+context:{name:"Anthropic · Effective context engineering",type:"官方工程",url:"https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",use:"上下文是有限资源；压缩与检索需按任务测量"},
+langgraph:{name:"LangGraph Documentation",type:"官方文档",url:"https://langchain-ai.github.io/langgraph/",use:"显式状态图、持久化与人工介入的选型入口"},
+openai:{name:"OpenAI Agents SDK",type:"官方文档",url:"https://openai.github.io/openai-agents-python/",use:"Agent loop、handoff、工具与追踪的框架入口"},
+adk:{name:"Google Agent Development Kit",type:"官方文档",url:"https://google.github.io/adk-docs/",use:"ADK 能力、语言与部署选型入口"},
+claude:{name:"Claude Agent SDK",type:"官方文档",url:"https://docs.claude.com/en/api/agent-sdk/overview",use:"成熟 Harness、工具与权限模型的框架入口"},
+msagent:{name:"Microsoft Agent Framework",type:"官方文档",url:"https://learn.microsoft.com/en-us/agent-framework/overview/",use:"微软生态的 Agent 与工作流入口"},
+agentscope:{name:"AgentScope Documentation",type:"官方文档",url:"https://doc.agentscope.io/",use:"Java/多 Agent 生态选型入口"},
+dify:{name:"Dify Documentation",type:"官方文档",url:"https://docs.dify.ai/",use:"可视化 Agent/工作流平台选型入口"},
+aws:{name:"Amazon Bedrock AgentCore Harness GA",type:"官方文档",url:"https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-harness-generally-available/",use:"托管 Harness 的边界：循环、工具、状态、隔离、身份与可观测"},
+vllm:{name:"vLLM Documentation",type:"官方文档",url:"https://docs.vllm.ai/",use:"连续批处理、KV cache、量化与推理服务调优"},
+sglang:{name:"SGLang Documentation",type:"官方文档",url:"https://docs.sglang.ai/",use:"推理运行时、调度与缓存机制的选型入口"},
+temporal:{name:"Temporal Documentation",type:"官方文档",url:"https://docs.temporal.io/",use:"持久化执行、重试、定时器与恢复的传统工程锚点"},
+opf:{name:"Open Policy Agent",type:"官方文档",url:"https://www.openpolicyagent.org/docs/latest/",use:"策略即代码；Agent 序列策略需要额外上下文与状态"},
+openfga:{name:"OpenFGA Documentation",type:"官方文档",url:"https://openfga.dev/docs",use:"关系授权与租户/对象级权限锚点"},
+k8s:{name:"Kubernetes Scheduling",type:"官方文档",url:"https://kubernetes.io/docs/concepts/scheduling-eviction/",use:"优先级、抢占、配额与调度语义"},
+swebench:{name:"SWE-bench",type:"官方基准",url:"https://www.swebench.com/",use:"基准版本、任务与 Harness 口径；本页不引用易变头部分数"},
+terminal:{name:"Terminal-Bench",type:"官方基准",url:"https://www.tbench.ai/",use:"终端任务评测入口；比较时固定 Agent、模型和配置"},
+osworld:{name:"OSWorld",type:"官方基准",url:"https://os-world.github.io/",use:"计算机使用环境、最终状态与任务评测入口"}
+};
+const EVIDENCE=[
+["evaluation","评测 / 评估（广义）",15,15,"broad"],["multi_agent","Multi-Agent",15,14,"literal"],["tool_use","Tool Use / 工具调用",14,13,"broad"],["orchestration","编排 / 调度 / 工作流",14,13,"broad"],["frameworks","Agent 框架",12,12,"literal"],["observability","可观测 / Trace",12,11,"broad"],["rag","RAG / 知识库",11,11,"literal"],["execution_environment","执行环境（广义）",10,9,"broad"],["memory","Memory / 记忆",10,10,"literal"],["long_task","长任务 / 恢复",10,10,"broad"],["context","Context Engineering",8,8,"literal"],["skills","Skills",8,8,"literal"],["ai_coding","AI Coding / AI-native SDLC",8,8,"literal"],["mcp_a2a","MCP / A2A（字面）",7,7,"literal"],["multimodal","多模态 / 语音 / 视觉",7,7,"literal"],["inference","推理性能 / 成本（广义）",7,5,"broad"],["post_training","后训练 / RL",6,5,"broad"],["harness","Harness（字面）",6,6,"literal"]
+];
+const STACK=[
+["L0","算力与模型服务","GPU/CPU、模型服务、KV cache、推理 SLO、模型与引擎版本","C1 / A"],["L1","不受信执行环境","沙箱、浏览器/计算机环境、镜像、文件系统、出口与凭证","A"],["L2","工具与互操作","Tool Schema、MCP、A2A、Skills、注册与版本、认证授权","A + B"],["L3","持久任务运行时","调度、状态、幂等、检查点、恢复、计时器、预算与容量","A"],["L4","上下文与记忆","上下文预算、压缩、检索、记忆写入/纠正/遗忘、租户隔离","A + B"],["L5","Agent 决策与编排","模型选择、ReAct/图/规划、委派、Multi-Agent、停止与人工接管","B"],["L6","评测与反馈","任务集、grader、轨迹、重复试验、线上信号、数据与反馈闭环","A + B"],["L7","信任与经营","身份、序列策略、隐私、发布、审计、每成功任务成本与事故响应","A + B"],["L8","产品与组织","领域流程、交互、多模态、ROI、采用、团队与治理","B / C3"]
+];
+const TREES={
+A:[
+{code:"A1",name:"不受信执行与环境",en:"Untrusted execution",heat:"执行环境 10/25",desc:"把模型生成的代码与浏览器动作当作不可预测、可能被注入的执行主体。",leaves:[
+["威胁模型与隔离分级","Threat-driven isolation","按数据敏感度、代码来源、网络与副作用选择容器、用户态内核、microVM 或 VM；不存在脱离配置的绝对安全排序。","容器、VM、seccomp、威胁建模","为一个同时读取网页、私有仓库并执行代码的 Agent 写威胁模型，证明高风险路径没有共享凭证或不受限出口。","Firecracker / gVisor / Kata / seccomp","#3 #7 #11 #14",["firecracker","gvisor","kata","owasp"]],
+["出口与凭证隔离","Egress & credential containment","注入无法被可靠根除，因此必须限制成功注入后的通信、凭证和副作用。","Egress firewall、secret broker、短期凭证","用网页诱导、工具描述投毒和数据外泄样本测试；同时报告绕过、误报、关键泄露路径和人工审批行为。","Egress allowlist / token vault / OIDC","#11 #14 #21",["owasp"]],
+["环境快照与记录回放","Snapshot & recorded replay","环境快照只保存环境状态；可复核调试还需模型/工具 I/O、版本、配置和外部副作用记录。","VM snapshot、event sourcing、record/replay","分别演示状态恢复、基于记录的轨迹回放和实时重跑，并明确三者哪些结果可以比较、哪些不能。","Snapshot / event log / deterministic mocks","#7 #11 #14",["temporal"]],
+["浏览器与计算机环境","Browser / computer-use environment","管理 DOM/截图输入、下载、文件系统、会话、外部账号和不可逆操作，不只是启动浏览器。","远程浏览器、VDI、自动化测试","在隔离环境复现下载替换、页面注入、会话过期和支付前审批；核查最终环境状态而非文本承诺。","Playwright / Browser Use / isolated VDI","#11 #14",["osworld","owasp"]]
+]},
+{code:"A2",name:"持久任务运行时与调度",en:"Durable runtime & scheduling",heat:"长任务 10/25 · 编排 14/25",desc:"把 Agent 运行建模为带副作用、预算和恢复语义的长生命周期工作流。",leaves:[
+["持久执行与幂等副作用","Durable execution & idempotency","步骤可重试，但外部副作用不能简单重放；需要幂等键、事务边界、outbox/inbox 或补偿。","工作流引擎、消息队列、Saga","kill -9 后恢复同一任务，验证不会重复扣款、发信或写单；记录仍需人工对账的场景。","Temporal / DB queue / outbox / idempotency key","#4 #6 #9 #17",["temporal"]],
+["检查点、暂停与恢复","Checkpoint & recovery","保存任务状态、待审批、计时器、工具游标和环境引用；模型输出缓存是另一项独立能力。","Checkpoint、持久化定时器、状态机","在模型调用、工具执行和人工审批前后分别故障注入，验证状态、预算和终止原因可恢复。","Checkpoint store / durable timer / state machine","#4 #6 #11 #21",["temporal"]],
+["任务调度与资源配额","Task & resource scheduling","同时调度任务优先级和 CPU/GPU/沙箱容量，处理长任务、排队、公平性与取消。","K8s scheduler、队列、配额、抢占","构造混合长短任务与故障租户，观察尾延迟、配额公平、取消传播和恢复积压，而非只报吞吐。","Kubernetes / fair queue / priority / quota","#2 #3 #11 #18",["k8s"]],
+["运行预算与终止控制","Budget & termination","把步数、墙钟时间、token、工具费用和人工等待纳入可取消预算，避免无限循环。","超时、熔断、配额、kill switch","分别触发模型循环、工具重试风暴和外部系统不可用，验证预算耗尽后安全终止并可审计。","Budget controller / circuit breaker / cancellation","#4 #14 #17 #21",["owasp"]]
+]},
+{code:"A3",name:"工具、协议与 Skill 网关",en:"Tools, protocols & skills",heat:"Tool 14/25 · MCP/A2A 7/25",desc:"连接层同时承担机器契约、模型可读语义、身份与供应链治理。",leaves:[
+["工具契约与版本治理","Tool contract & versioning","统一 Schema、错误、超时、幂等、权限和兼容策略，让模型语义与机器执行可分别演进。","OpenAPI、gRPC、JSON Schema、版本化","跨版本运行契约测试；验证模糊参数、部分失败、限流和重复请求都有机器可读语义。","JSON Schema / OpenAPI / semantic versioning","#3 #16 #21",["mcp"]],
+["MCP 客户端与服务端","MCP integration","理解 Tools/Resources/Prompts、发现、传输、授权和扩展；按部署版本兼容，不假设所有实现同期升级。","RPC、OAuth、API gateway","在同网关后运行无状态多实例，验证路由、能力发现、列表缓存、授权和版本协商；记录不支持的新特性。","MCP 2026-07-28 / MRTR / CIMD / Tasks extension","#3 #5 #12 #13 #16 #17 #21",["mcp"]],
+["A2A 跨 Agent 互操作","A2A interoperability","面向独立、 opaque Agent 的发现、任务与消息互操作，不是进程内 subagent 协议。","Agent Card、任务 API、远程过程调用","跨框架发现远程 Agent，验证 Agent Card 签名、任务轮询/流式、认证失败和不受信返回内容。","A2A v1.0 / JWS / JCS / Agent Card","#5 #21",["a2a"]],
+["工具与 Skill 注册治理","Registry & supply chain","对工具、MCP server、Skill 和脚本做来源、版本、权限、签名、审查和撤回，防止描述与依赖投毒。","Service catalog、artifact registry、SBOM","变更工具描述或 Skill 依赖后触发重新审查；演示撤回版本不会继续被新任务加载。","Registry / policy / SBOM / signed artifacts","#3 #13 #20 #21",["skills","owasp"]],
+["协议网关与认证","Protocol gateway & auth","在模型之外执行认证、授权、限流、审计、路由和协议适配；模型不可决定自身权限。","API gateway、OPA、服务网格","验证不同租户、Agent 身份和工具版本的路由与权限；测试凭证跨域、重放和降级路径。","Gateway / OAuth / OPA / rate limit","#3 #18 #21",["mcp","opf"]]
+]},
+{code:"A4",name:"平台控制面与开发体验",en:"Control plane & developer experience",heat:"Agent 框架 12/25",desc:"把单个 Agent 的复杂度变成可复用、可迁移、可运维的平台制品。",leaves:[
+["Agent 定义与配置模型","Agent definition & config","将模型、指令、工具、Skills、运行时、权限、预算和评测配置组成可版本化制品。","CRD、配置即代码、IaC","同一 Agent 定义可部署到开发与生产并明确差异；任何变更都能关联评测和发布记录。","YAML/CRD / GitOps / immutable version","#2 #5 #9 #18",["aws"]],
+["框架适配与可移植性","Framework adapters","隔离框架专有状态、事件和工具模型，避免把平台契约泄漏到每个业务 Agent。","Adapter、anti-corruption layer、SDK","用同一任务在两个框架实现纵切片，比较状态、追踪、恢复和工具语义，而非只比较代码行数。","LangGraph / OpenAI Agents SDK / ADK / Claude SDK","#1 #3 #12 #16",["langgraph","openai","adk","claude"]],
+["环境、目录与自助发布","Environment & catalog","提供模板、环境、密钥引用、目录、审批和发布工作流，让团队不重复搭建基础设施。","Internal developer platform、Backstage","新团队从模板创建受治理 Agent，并自动获得身份、trace、评测和销毁策略。","IDP / templates / service catalog","#2 #18 #20",["aws"]],
+["测试 Harness 与环境虚拟化","Test harness & virtualization","为 Agent 提供可控模型、工具、用户和时间替身，支持重复试验与故障注入。","Testcontainers、VCR、service virtualization","同一任务可在无真实外部副作用的环境重复运行，并覆盖超时、乱序、限流和异常工具返回。","Mock model / tool simulator / virtual user","#6 #13 #14 #20",["eval"]]
+]},
+{code:"A5",name:"身份、策略、隐私与发布",en:"Identity, policy & change",heat:"安全治理横切",desc:"权限判断发生在模型之外，并考虑上下文、行动序列、数据生命周期与变更风险。",leaves:[
+["租户、用户与 OBO 身份","Tenant & OBO identity","区分平台、租户、用户、Agent 与工具身份；跨 Agent 调用需保留委托链和受众边界。","IAM、OAuth、OIDC、ABAC/ReBAC","越权用例必须失败且可审计；跨 Agent 请求不能借复用高权限 token 扩大受众。","OAuth / OIDC / OBO / OpenFGA","#3 #18 #21 #23",["openfga","a2a"]],
+["上下文与序列感知策略","Context & sequence policy","权限不仅看单次工具调用，还看此前读取过的数据、当前目标、序列与风险。","OPA、状态机、策略即代码","合法读取敏感数据后，后续外发动作被阻止或升级审批；策略判定不依赖模型自觉。","Policy engine / approval gate / risk tier","#17 #21 #23",["opf","owasp"]],
+["隐私与数据生命周期","Privacy & lifecycle","对提示、轨迹、记忆、工具载荷和评测数据执行最小化、脱敏、保留、删除与驻留策略。","DLP、数据目录、保留策略","删除用户记忆后，在线索引、备份策略和评测副本按声明处理；trace 默认不采集敏感全文。","PII redaction / retention / tenant keys","#21 #23",["otel","owasp"]],
+["版本、灰度与回滚","Release & rollback","把模型、Prompt、工具 Schema、Skill、记忆策略和 Harness 作为联合变更表面。","GitOps、灰度、feature flag、回滚","一次模型或工具变更可定位到质量差异；回滚代码时不会遗留不兼容记忆或任务状态。","Immutable release / eval gate / canary","#2 #9 #18 #21",["eval"]]
+]},
+{code:"A6",name:"轨迹可观测、成本与运行",en:"Observability, cost & operations",heat:"可观测 12/25",desc:"调试单位是完整任务轨迹，经营单位是成功任务，而不是单次模型请求。",leaves:[
+["端到端 Agent Trace","Agent tracing","串联任务、Agent、模型、工具、检索、审批、环境事件和最终结果，并记录配置版本。","OpenTelemetry、分布式追踪","任意失败任务可回答模型、工具、环境、上下文和策略分别发生了什么；敏感内容按需采集。","OTel GenAI / invoke_agent / execute_tool","#3 #4 #16 #21 #22",["otel","otelrepo"]],
+["轨迹调试与失败归因","Trajectory debugging","建立可读轨迹、失败分类、环境状态和最终 outcome 的联合视图，避免只看最后回答。","日志分析、分布式调试、事件溯源","对一批失败做盲归因并与事后根因对照，验证分类体系能指导修复而非只统计数量。","Trace viewer / failure taxonomy / outcome check","#11 #14 #16 #21",["eval"]],
+["每成功任务成本","Cost per successful task","成本由轨迹、重试、工具、沙箱、存储、网络、人工复核与失败共同决定；不是简单随时长线性。","FinOps、单位经济、成本分摊","按任务分位和成功/失败分层报告成本，识别重试、上下文与工具异常；同时观察 QPS 和并发影响。","Token metering / runtime cost / human review cost","#3 #8 #14 #17 #21",["multi"]],
+["质量-延迟-可用性 SLO","Multi-dimensional SLO","任务成功、延迟、可用性、安全和成本都是生产目标，不能相互替代。","SRE、SLI/SLO、错误预算","分别定义短交互与长任务 SLO；故障演练同时观察成功率、尾延迟、恢复时间和副作用。","Task success / TTFT / E2E latency / safety budget","#3 #4 #21 #22",["otel"]]
+]},
+{code:"A7",name:"评测基础设施与发布门禁",en:"Evaluation infrastructure",heat:"评测可见度 15/25",desc:"A 负责可重复执行和证据保存，B 负责任务与评分是否真正代表业务。",leaves:[
+["任务与数据版本仓库","Task & dataset registry","管理任务、输入环境、预期 outcome、风险标签、来源、许可和版本，防止评测集静默变化。","数据集版本、特征仓库、测试管理","每次报告都能定位任务集与环境版本；新增真实 badcase 不覆盖历史基准。","DVC / dataset registry / task manifest","#13 #15 #20 #23",["eval"]],
+["隔离评测运行器","Evaluation runner","并发运行任务与多 trials，固定模型、Harness、工具、环境和评分器配置。","CI、分布式任务队列、容器","同一配置可重复执行并保存原始轨迹；运行间资源与外部依赖差异被显式记录。","Eval harness / isolated workers / run manifest","#6 #13 #14 #20",["eval"]],
+["评分器服务与校准数据","Grader service & calibration","统一代码、模型和人工评分接口，保存 rubric、judge 版本与校准样本。","模型服务、标注平台、统计评估","Judge 更新可在固定人工集上比较一致性、偏差与成本，不会静默改变历史分数。","LLM-as-judge / human review / rubric registry","#13 #15 #17 #20",["eval"]],
+["回归与发布证据","Regression evidence","将质量、一致性、成本、延迟与安全结果纳入可审计比较；阈值由风险决定。","CI quality gate、实验平台、统计检验","报告样本量、每任务 trials、置信区间、版本和失败清单；小样本只作为探索性证据。","Paired comparison / CI / release gate","#14 #16 #17 #21",["eval"]]
+]}
+],
+B:[
+{code:"B1",name:"任务-模型匹配与 Agent 设计",en:"Task-model fit & agent design",heat:"Agent 框架 12/25",desc:"先决定任务是否适合 Agent，再决定模型、循环和确定性工作流的边界。",leaves:[
+["任务可判定性与自治分级","Task legibility & autonomy","评估目标是否可判定、环境是否可观察、错误是否可逆，再决定自动化程度。","工作流分析、风险分级、HITL","为一个任务写出适合 Agent、适合固定工作流和不应自动化三类子任务，并给出可验证理由。","Task decomposition / risk tier / autonomy level","#1 #8 #10 #19",["eval"]],
+["模型与策略选择","Model & policy selection","按任务质量、工具能力、上下文、延迟、成本和可用性选择模型与运行参数。","模型评测、A/B、路由","在自有任务上比较候选模型，固定 Harness 并重复试验；报告质量-成本前沿而非单次印象。","Model routing / structured output / decoding config","#3 #9 #12 #20",["eval"]],
+["Agent 与确定性工作流边界","Agent/workflow boundary","把开放决策交给模型，把稳定规则、资金、权限和关键校验交给确定性代码。","状态机、业务规则引擎","标出循环中每个决策由模型还是代码负责；高风险终态不能仅靠自然语言约束。","ReAct / state graph / rules / guardrails","#2 #5 #9 #18",["langgraph"]],
+["结构化输出与降级","Structured behavior & fallback","让输出可校验，并为模型不可用、低置信、工具失败和预算耗尽设计替代路径。","Schema validation、重试、降级","无效 JSON、拒答、工具超时和低置信分别进入明确路径，不会无限重试或静默成功。","JSON Schema / constrained decoding / fallback","#17 #21 #23",["eval"]]
+]},
+{code:"B2",name:"规划、委派与 Multi-Agent",en:"Planning & delegation",heat:"Multi-Agent 15/25",desc:"多 Agent 是用协调成本换并行、隔离或专门化，不是能力树的默认终点。",leaves:[
+["计划、执行与再规划","Plan-execute-replan","管理目标、中间假设、计划状态和计划失效，避免把固定步骤误称自主规划。","规划器、状态图、反思","在外部信息推翻初始计划时，系统能保留证据、调整计划并说明终止条件。","Plan-and-Execute / state graph / critique","#1 #4 #14 #17",["langgraph"]],
+["Subagent 与上下文隔离","Subagent isolation","把独立调查、不同工具权限或超出单上下文的工作拆分，并限制返回信息量。","并行任务、上下文工程","对比单 Agent 与 Subagent 的质量、token、延迟和失败传播；证明拆分来自任务结构。","Orchestrator-worker / scoped context","#4 #13 #14",["multi","context"]],
+["Multi-Agent 协作协议","Multi-agent coordination","定义任务所有权、共享状态、消息语义、冲突、合并与取消；避免角色扮演式空拆。","黑板、消息传递、 supervisor","在重复工作、冲突结论和部分失败下验证合并与终止；与单 Agent 基线做同任务比较。","Supervisor / blackboard / A2A / handoff","#2 #8 #13 #20",["multi","a2a"]],
+["自治预算与人工升级","Autonomy & escalation","根据风险、不确定性和连续失败升级人工，而不是仅按固定步数停止。","人机协作、异常队列、风险控制","构造目标含糊、工具冲突和高风险动作，验证 Agent 能提问、暂停、转交并保留上下文。","HITL / confidence policy / escalation queue","#4 #10 #17 #21",["eval","owasp"]]
+]},
+{code:"B3",name:"上下文工程与压缩",en:"Context engineering",heat:"Context 8/25",desc:"选择下一步决策所需的信息，而不是把最大上下文窗口当作默认存储。",leaves:[
+["上下文预算与信息来源","Context budget & provenance","管理指令、历史、工具结果、检索、记忆和 Skills 的优先级、来源与信任边界。","缓存、信息架构、优先级队列","报告各类上下文占比、来源与任务贡献；不受信内容与系统指令在策略上明确区分。","Context budget / provenance / prompt cache","#4 #9 #14 #17",["context","owasp"]],
+["压缩、摘要与状态外化","Compaction & external state","压缩会丢失信息；关键状态应结构化外化，摘要需要保留未决事项、证据与来源。","摘要、状态外化、事件日志","长任务中比较全文、滚动摘要和结构化状态，测量质量、成本及关键事实丢失，不使用固定 60–70% 阈值。","Compaction / structured scratchpad / handoff state","#13 #14 #16 #17",["context"]],
+["检索式上下文与按需加载","Just-in-time context","按需读取工具、文件、记忆和 Skill，减少静态上下文，同时控制检索失败。","RAG、工具检索、渐进披露","大规模工具/Skill 集合下评估选择错误、遗漏、加载延迟和上下文成本。","Tool retrieval / SKILL.md / references","#3 #13 #16 #21",["skills","context"]],
+["跨步骤状态与交接","State & handoff design","明确哪些状态属于任务、步骤、Agent 和用户，避免通过重复全文传递所有信息。","状态机、DTO、工作流上下文","跨 Agent/人工交接后，目标、证据、权限、未决事项和副作用状态仍可验证。","Handoff schema / task state / event log","#4 #13 #17",["context"]]
+]},
+{code:"B4",name:"记忆、检索与知识治理",en:"Memory & knowledge",heat:"Memory 10/25 · RAG 11/25",desc:"Memory 是学习什么值得保留；RAG 是检索当前需要什么。两者都必须处理权限、时间和错误。",leaves:[
+["记忆写入与来源治理","Memory write & provenance","决定从对话、行为和反馈中写什么，并保存来源、置信、时间、租户和用户控制。","CDC、数据质量、元数据","错误推断、过期偏好和恶意写入可以被纠正、撤回和审计，不能永久污染后续任务。","Episodic/semantic memory / provenance / TTL","#5 #13 #17 #21",["owasp"]],
+["记忆检索与反馈闭环","Memory retrieval & feedback","按任务、时间、主体和权限检索，评估记忆是否有帮助而非仅召回相似文本。","检索排序、在线学习、反馈","比较无记忆与有记忆策略，并专门测试错误记忆、冲突记忆和遗忘后的行为。","Hybrid retrieval / reranking / feedback","#3 #13 #17 #21",["context"]],
+["RAG 与知识状态校验","RAG & grounded outcome","处理切分、索引、权限、引用、时效与答案后的环境状态，不把检索相似度当任务成功。","搜索、推荐、知识图谱","建立无答案、冲突来源、过期文档和越权文档用例，检查引用与最终状态。","Vector/BM25 / rerank / ACL-aware retrieval","#8 #15 #20 #23",["eval"]],
+["纠正、遗忘与删除","Correction & forgetting","用户纠正与删除需要穿透记忆、索引、缓存和派生数据，不只是追加一条新偏好。","数据生命周期、撤回、索引更新","执行纠正和删除后，新任务不再使用旧事实；保留策略和备份例外有明确记录。","Tombstone / reindex / retention policy","#21 #23",["owasp"]]
+]},
+{code:"B5",name:"工具语义与 Skill 设计",en:"Agent-facing tools & skills",heat:"Tool 14/25 · Skills 8/25",desc:"把传统 API 转成模型能理解、选择、纠错和安全使用的能力接口。",leaves:[
+["Agent-facing 工具设计","Agent-facing tool design","工具名称、描述、参数和错误是模型决策界面；需要机器契约与语义契约同时成立。","API design、UX writing、Schema","在歧义任务和异常返回下评估选择、参数和恢复；模型之外的权限始终独立执行。","JSON Schema / error taxonomy / idempotency","#1 #3 #14 #16",["eval","mcp"]],
+["Skill 包与渐进披露","Skill design & progressive disclosure","Skill 外化程序性知识，可含指令、脚本、引用和资产；不等于 Tool，也不天然可信。","文档工程、代码包、版本管理","验证触发、误触发、正文长度、引用加载和脚本权限；官方建议元数据约 100 token、正文 <5000 token。","SKILL.md / scripts / references / skills-ref","#3 #5 #13 #21",["skills","owasp"]],
+["大规模工具与 Skill 检索","Capability retrieval","能力数量增长后需要检索、分组、权限过滤和上下文预算，不能全部塞入提示。","检索、路由、服务目录","随着能力数量增长报告选择准确率、遗漏、延迟和 token；按租户隐藏无权限能力。","Tool retrieval / registry / ranking","#3 #13 #20 #21",["skills"]],
+["工具结果压缩与可恢复错误","Result shaping & recoverable errors","把大型、噪声或敏感工具结果转成有来源、可继续行动的信息，并区分可重试与需改参。","错误处理、分页、摘要","工具超时、空结果、部分失败和大 payload 分别产生可处理行为，不造成盲目重复调用。","Pagination / typed errors / result summary","#14 #16 #17",["eval"]]
+]},
+{code:"B6",name:"质量科学、统计与安全评测",en:"Evaluation science & safety",heat:"评测可见度 15/25",desc:"同时回答平均能力、重复一致性、风险、成本与线上价值，避免单一分数。",leaves:[
+["任务采样与成功定义","Task sampling & outcome","从真实分布和失败中采样，定义可观察 outcome、交互质量、正例与反例。","测试设计、领域建模、数据采样","领域专家能独立判断任务是否成功；任务集覆盖常见、困难、边界和不应执行的场景。","Task set / gold outcome / negative cases","#13 #15 #20 #23",["eval"]],
+["轨迹与结果联合评分","Trajectory & outcome grading","代码校验、状态检查、rubric 与人工评审各评不同维度；有效替代路径不应被机械判错。","单元测试、状态断言、LLM Judge","最终回答声称成功时检查真实环境；阅读误判轨迹并修正任务或评分器。","Code grader / state grader / rubric / transcript","#14 #16 #17 #21",["eval"]],
+["Judge 校准与偏差控制","Judge calibration","Judge 是带版本和偏差的测量仪器，需要人工锚点、偏差测试和持续抽检。","标注、测量一致性、统计质量控制","固定人工集上报告一致性、系统性偏好和分歧案例；Judge 更新重新校准。","Human calibration / rubric / judge registry","#13 #15 #17 #20",["eval"]],
+["重复试验与不确定度","Trials & uncertainty","pass@1 衡量单次平均成功，pass@k 衡量至少一次成功，pass^k 衡量全部成功；按产品问题组合使用。","实验设计、二项统计、A/B","固定配置进行多 trials，报告任务数、试验数、置信区间与配对差异；不把五次运行笼统称为稳定。","pass@1 / pass@k / pass^k / paired CI","#14 #16 #20",["eval"]],
+["安全、滥用与红队","Safety & adversarial eval","测试目标劫持、工具滥用、数据外泄、记忆中毒、跨 Agent 欺骗和人工信任滥用。","AppSec、威胁建模、红队","按风险定义关键不可接受结果；报告攻击覆盖、严重度、误报与防御深度，而非只报一个拦截率。","OWASP ASI / injection corpus / abuse cases","#11 #17 #21 #23",["owasp"]],
+["线上反馈与回归资产","Online signals & regression","把人工接管、纠正、重做、投诉、最终业务 outcome 和 badcase 回流为评测资产。","产品分析、闭环质量、A/B","线上问题能追溯到任务、轨迹、配置和修复回归；同时防止只优化易采集代理指标。","Online eval / user feedback / badcase loop","#16 #17 #20 #21",["eval"]]
+]},
+{code:"B7",name:"领域产品、多模态与人机协作",en:"Product, domain & interaction",heat:"多模态 7/25",desc:"Agent 的价值由真实流程、用户信任和组织采用决定，不由 Agent 步数决定。",leaves:[
+["领域流程与业务状态建模","Domain workflow modeling","把领域规则、角色、状态、异常、合规和最终业务结果显式建模。","DDD、BPMN、业务分析","领域专家可从轨迹判断业务正确性；系统处理异常与反向流程，而非只跑通 happy path。","Domain model / state machine / business outcome","#8 #10 #19 #23",["eval"]],
+["人工接管与信任交互","HITL & trust UX","呈现目标、证据、风险、待批准动作和恢复状态，避免把审批做成无信息按钮。","UX、审批流、可解释界面","用户能发现并纠正错误计划、拒绝具体动作、接管后继续任务；记录接管原因。","Approval UX / progress / undo / escalation","#4 #10 #21",["owasp"]],
+["多模态与实时交互","Multimodal interaction","处理语音、图像、屏幕和文档输入的时延、成本、隐私、不确定性与模态回退。","实时音视频、OCR、多模态评测","在噪声、模糊图像和中断下测试任务结果与人工接管，而非只演示理想输入。","Speech / vision / realtime / OCR","#1 #8 #10 #12",["eval"]],
+["价值、采用与退出机制","Value, adoption & exit","衡量节省的时间、质量提升、风险、人工复核与用户采用，并保留非 Agent 退出路径。","产品指标、服务设计、FinOps","报告每成功任务总成本与用户/业务 outcome；低价值或高风险子流程可退回固定工作流。","ROI / adoption / human review / fallback","#8 #10 #19 #20",["multi"]]
+]},
+{code:"B8",name:"反馈学习与 AI-native 研发",en:"Learning loops & AI-native SDLC",heat:"AI Coding 8/25",desc:"自进化首先是受治理的工程闭环；AI Coding 也是可评审、可测试的研发体系。",leaves:[
+["反馈到待办与知识沉淀","Feedback-to-backlog","把 badcase 归因到模型、上下文、工具、环境、策略或任务定义，再进入修复与回归。","质量闭环、根因分析、知识管理","每类系统性失败有负责人、修复假设、回归任务和验证结果，而非只追加提示补丁。","Failure taxonomy / eval-driven backlog","#1 #16 #17 #20",["eval"]],
+["Skill 与经验学习","Skill & experience learning","从成功/失败轨迹提炼可复用流程，但必须经过审查、版本化、权限和效果验证。","知识蒸馏、规则挖掘、资产化","候选 Skill 在保留任务集上证明净收益，误触发、冲突和撤回路径均被测试。","Skill mining / trajectory mining / registry","#1 #13 #16",["skills","eval"]],
+["有边界的自改进","Bounded self-improvement","自动修改 Prompt、工具或策略需要离线验证、审批、灰度和回滚；不能无边界自我扩权。","AutoML、配置优化、变更管理","系统提出改进候选但不直接获得生产权限；所有变更可定位、可复现、可撤回。","Prompt/config optimization / gated rollout","#1 #13 #16 #17",["eval","owasp"]],
+["Spec Coding 与 AI 协作研发","Spec-driven AI coding","把需求、架构、测试、代码审查和证据变成 Agent 可执行且人可评审的工程制品。","SDLC、规格驱动开发、代码评审","AI 生成变更必须通过规格、测试、安全审查与人工责任；评估返工和缺陷，而非只统计生成速度。","Spec Coding / AGENTS.md / eval-driven development","#2 #3 #7 #12 #13 #14 #17 #20",["eval","owasp"]]
+]}
+],
+C:[
+{code:"C1",name:"模型服务与推理系统",en:"Model serving & inference",heat:"推理相关 7/25",desc:"独立专业方向：为 Agent 提供可扩展、可测量、可回滚的模型能力。",leaves:[
+["推理服务架构","Serving architecture","理解 prefill/decode、连续批处理、排队、分布式推理、模型实例与请求路由。","高并发服务、GPU 集群、负载均衡","在代表性上下文和输出长度下建立吞吐、TTFT、TPOT、可用性和成本基线。","vLLM / SGLang / TensorRT-LLM / serving gateway","#12 #24 #25",["vllm","sglang"]],
+["KV Cache 与长上下文性能","KV cache & long context","Agent 的长提示与多轮历史改变显存、缓存命中、抢占和延迟结构。","内存管理、缓存、性能分析","按共享前缀、上下文长度和并发分层测量缓存收益与质量/隔离影响。","PagedAttention / prefix cache / RadixAttention","#14 #21 #24 #25",["vllm","sglang"]],
+["量化、解码与质量联合调优","Optimization & quality tradeoff","量化、投机解码和批处理优化必须同时评估任务质量与尾延迟。","性能工程、数值精度、A/B","优化前后运行同一 Agent 任务集，报告速度、成本、质量和模型/引擎版本。","Quantization / speculative decoding / batching","#12 #24 #25",["vllm","eval"]],
+["模型容量、路由与发布","Capacity, routing & release","管理模型版本、容量、租户配额、故障切换和跨引擎兼容；模型路由还需 B 的质量证据。","容量规划、灰度、服务网格","模型升级或故障切换时保持任务可恢复，并观察质量、延迟、成本和上下文兼容。","Model gateway / autoscaling / canary","#3 #12 #25",["vllm"]]
+]},
+{code:"C2",name:"后训练与 Agentic RL",en:"Post-training & Agentic RL",heat:"后训练 / RL 6/25",desc:"当 Harness 优化到达边界，轨迹、环境与奖励可进入模型能力改进，但需要独立的数据与安全体系。",leaves:[
+["轨迹数据与血缘治理","Trajectory data & lineage","从任务轨迹构建训练数据，处理同意、隐私、许可、去重、污染、难例和失败样本。","数据工程、数据版本、标注","每个训练样本可追溯任务、环境、模型、Harness 和评分；训练/评测去泄漏。","Trajectory dataset / DVC / lineage / decontamination","#7 #15 #24",["eval"]],
+["SFT 与偏好优化","SFT & preference optimization","用高质量行为、工具使用与偏好数据调整模型；区分模仿表面轨迹与学习可泛化决策。","监督微调、偏好学习、数据筛选","在保留任务和真实环境评测泛化、回归与安全，而非只报告训练集指标。","SFT / DPO / reward modeling","#5 #7 #12 #15",["eval"]],
+["RL 环境、奖励与探索","RL environments & rewards","构建可复位环境、可验证奖励、工具交互和探索策略，处理奖励投机与部分可观察性。","RL、仿真环境、奖励设计","环境能检测代理奖励与真实 outcome 的偏离；训练配置、种子、版本和失败轨迹可复核。","Agentic RL / GRPO / verifiable rewards / simulator","#7 #24",["eval"]],
+["模型-Harness 联合评测","Model-harness co-evaluation","模型与 Harness 是联合被测单元；模型升级可能改变工具使用、上下文需求和故障模式。","系统实验、协同优化、回归测试","在多个 Harness 与任务族上比较模型变更，识别协同收益、负迁移与安全回归。","Model × Harness matrix / online-offline eval","#13 #14 #24",["eval","multi"]]
+]},
+{code:"C3",name:"产品组合与组织领导",en:"Strategy & organizational leadership",heat:"负责人岗横切",desc:"负责人需要交付方向、组织与经营系统，而不只是更复杂的架构图。",leaves:[
+["机会组合与自治边界","Portfolio & autonomy strategy","按业务价值、任务可判定性、风险与数据准备度排序机会，决定不做什么。","产品战略、风险管理、平台战略","形成有优先级、退出条件和非 Agent 替代方案的路线图，避免所有流程统一 Agent 化。","Opportunity scoring / risk tier / product portfolio","#10 #12 #19 #20",["eval"]],
+["Build vs Buy 与投资回报","Build/buy & ROI","比较自研、框架、托管平台和模型提供方的全生命周期成本、锁定与差异化价值。","技术选型、FinOps、供应商管理","用同一业务纵切片评估交付、运维、质量、迁移和退出成本，而非只比较许可价格。","TCO / ROI / vendor exit / managed harness","#10 #19 #20",["aws"]],
+["团队拓扑与能力梯队","Team topology & talent","定义平台、Agentic、模型系统、评测、领域和安全之间的责任与人才结构。","Conway 定律、平台团队、能力模型","关键制品有唯一 accountable owner，跨团队接口和升级路径明确；培训与实际交付绑定。","Platform team / embedded domain team / RACI","#12 #19 #20 #23",["eval"]],
+["治理、采用与组织变更","Governance & adoption","建立风险分级、发布责任、事故响应、用户培训、采用指标和政策更新机制。","技术治理、变更管理、运营机制","新 Agent 上线前有责任人和退出方案；上线后跟踪采用、接管、事故与业务价值并调整自治。","Operating model / governance / adoption metrics","#10 #19 #20 #23",["owasp"]]
+]}
+]};
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function refs(keys){return keys.map(k=>{const s=SOURCES[k];return s?'<a href="'+esc(s.url)+'" target="_blank" rel="noreferrer">'+esc(s.name)+' ↗</a>':""}).join("")}
+function renderTree(track){const root=document.getElementById("tree"+track);root.innerHTML=TREES[track].map(b=>'<article class="branch '+track+'" data-search="'+esc((b.code+" "+b.name+" "+b.en+" "+b.desc).toLowerCase())+'"><div class="bh"><div class="code">'+b.code+'</div><div><div class="bt">'+esc(b.name)+' <span class="small">'+esc(b.en)+'</span></div><div class="bd">'+esc(b.desc)+'</div></div><div class="heat">'+esc(b.heat)+'<br>'+b.leaves.length+' NODES</div></div>'+b.leaves.map((l,i)=>{const id=b.code+"-"+(i+1);return '<div class="leaf" data-search="'+esc((l[0]+" "+l[1]+" "+l[2]+" "+l[3]+" "+l[4]+" "+l[5]).toLowerCase())+'"><button class="lb" aria-expanded="false" aria-controls="'+id+'"><span class="tw">▶</span><span class="nm">'+esc(l[0])+'<span>'+esc(l[1])+'</span></span><span class="jd">JD '+esc(l[6])+'</span></button><div class="dt" id="'+id+'"><div><div class="dl">是什么 / WHY</div><div class="dcopy">'+esc(l[2])+'</div></div><div><div class="dl">传统锚点 / ANCHOR</div><div class="dcopy">'+esc(l[3])+'</div></div><div><div class="dl">示例验收 / EVIDENCE</div><div class="dcopy">'+esc(l[4])+'</div></div><div><div class="dl">关键技术 / TECH</div><div class="dcopy">'+esc(l[5])+'</div></div><div class="refs">JD '+esc(l[6])+(l[7].length?' · Sources '+refs(l[7]):"")+'</div></div></div>'}).join("")+'</article>').join("")}
+Object.keys(TREES).forEach(renderTree);
+document.getElementById("evidenceChart").innerHTML=EVIDENCE.map(r=>'<div class="row"><div><span>'+esc(r[1])+'</span><span class="btag '+(r[4]==="broad"?"broad":"lit")+'">'+(r[4]==="broad"?"BROAD":"LITERAL")+'</span></div><div class="bar" role="img" aria-label="'+esc(r[1])+'：全部 '+r[2]+' 岗，核心 '+r[3]+' 岗，词族类型 '+(r[4]==="broad"?"广义":"字面")+'"><div class="fill" style="width:'+(r[2]/25*100)+'%"></div></div><div class="val">'+r[2]+'/25 · '+r[3]+'/22</div></div>').join("");
+document.getElementById("stack").innerHTML=STACK.map(l=>'<div class="lay"><div class="ln">'+l[0]+'</div><div class="lt">'+esc(l[1])+'</div><div class="ld">'+esc(l[2])+'</div><div class="lo"><span class="pill '+(l[3].includes("C")?"pc":l[3].includes("+")?"pw":l[3]==="A"?"pa":"pb")+'">'+esc(l[3])+'</span></div></div>').join("");
+const used=new Set();Object.values(TREES).forEach(bs=>bs.forEach(b=>b.leaves.forEach(l=>l[7].forEach(k=>used.add(k)))));["mcp","a2a","skills","otel","owasp","eval","context","multi"].forEach(k=>used.add(k));
+document.getElementById("sourceTable").insertAdjacentHTML("beforeend",Array.from(used).sort().map(k=>{const s=SOURCES[k];return '<tr><td>'+esc(k)+'</td><td><a href="'+esc(s.url)+'" target="_blank" rel="noreferrer">'+esc(s.name)+' ↗</a></td><td>'+esc(s.type)+'</td><td>'+esc(s.use)+'</td></tr>'}).join(""));
+const branches=Object.values(TREES).flat();document.getElementById("branchCount").textContent=branches.length;document.getElementById("nodeCount").textContent=branches.reduce((n,b)=>n+b.leaves.length,0);document.getElementById("sourceCount").textContent=used.size;
+function setLeaf(l,open){l.classList.toggle("open",open);const b=l.querySelector(".lb");if(b)b.setAttribute("aria-expanded",String(open))}
+document.addEventListener("click",e=>{const b=e.target.closest(".lb");if(b)setLeaf(b.closest(".leaf"),!b.closest(".leaf").classList.contains("open"))});
+const controls=document.createElement("div");controls.className="tools";controls.innerHTML='<input class="search" id="search" type="search" aria-label="搜索能力节点" placeholder="搜索节点、技术或传统锚点…"><button class="btn on" data-filter="ALL">全部</button><button class="btn" data-filter="A">Platform</button><button class="btn" data-filter="B">Agentic</button><button class="btn" data-filter="C">Adjacent</button><button class="btn" id="expand">展开当前</button><button class="btn" id="collapse">全部收起</button><button class="btn" onclick="window.print()">打印</button><a class="btn" href="assets/agent-capability-atlas.pdf" target="_blank" rel="noreferrer">PDF ↓</a><a class="btn" href="https://github.com/Bing2030/agent-capability-atlas" target="_blank" rel="noreferrer">GitHub ↗</a>';document.querySelector(".hero").after(controls);
+let filter="ALL";function apply(){const q=document.getElementById("search").value.trim().toLowerCase();let visible=0;document.querySelectorAll("section#s04,section#s05,section#s06").forEach(sec=>{const track=sec.id==="s04"?"A":sec.id==="s05"?"B":"C";sec.style.display=filter==="ALL"||filter===track?"":"none";sec.querySelectorAll(".branch").forEach(br=>{let any=false;br.querySelectorAll(".leaf").forEach(l=>{const show=!q||l.dataset.search.includes(q)||br.dataset.search.includes(q);l.style.display=show?"":"none";if(show){any=true;visible++;if(q)setLeaf(l,true)}});br.style.display=any?"":"none"})});document.getElementById("search").setAttribute("aria-label","搜索能力节点，当前 "+visible+" 个可见")}
+document.getElementById("search").addEventListener("input",apply);document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{filter=b.dataset.filter;document.querySelectorAll("[data-filter]").forEach(x=>x.classList.toggle("on",x===b));apply()}));document.getElementById("expand").onclick=()=>document.querySelectorAll("section:not([style*='display: none']) .leaf:not([style*='display: none'])").forEach(l=>setLeaf(l,true));document.getElementById("collapse").onclick=()=>document.querySelectorAll(".leaf").forEach(l=>setLeaf(l,false));
+const sections=[...document.querySelectorAll("section")],links=[...document.querySelectorAll("nav a")];const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-12% 0px -72% 0px"});sections.forEach(s=>io.observe(s));addEventListener("scroll",()=>{const h=document.documentElement;document.getElementById("prog").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+</script>
+</body></html>
