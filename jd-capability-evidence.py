@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce the JD-visibility statistics used by agent-capability-map-v2.html.
+"""Reproduce the JD-visibility statistics used by the Agent Capability Atlas.
 
 The metric is corpus visibility: whether a term family occurs anywhere in a JD.
 It is NOT a count of mandatory requirements, core responsibilities, or market share.

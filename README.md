@@ -8,7 +8,7 @@ This is a living reference. The HTML is intentionally self-contained and the evi
 
 ## How it is organised
 
-One capability graph, six views. The graph is the source of truth; every other view is a projection of it, so node codes (A1, B6, C2 …) stay stable wherever you read them.
+One capability graph, six views. The graph is the source of truth; every other view is a projection or cross-referenced operating view. Branch codes (A1, B6, C2 …) stay stable wherever you read them, while capability IDs (A1-1, B6-4 …) identify individual leaves.
 
 | View | Answers | Key |
 |---|---|---|
@@ -23,7 +23,7 @@ Harness is treated as a cross-cutting lens rather than a separate tree.
 
 **Why not two trees.** The original Platform / Agentic split mixed three different axes on one level: job role, system responsibility, and professional maturity ("adjacent" implies secondary). It also split co-owned work — tool contracts (A3) and tool semantics (B5) — into different trees. Capability domains are now the spine; A/B/C survive as a role projection with explicit depth levels. The reasoning and the frameworks that informed it (CNCF platform engineering, NIST AI RMF, ISO/IEC 42001, AWS AgentOps, SFIA, NICE, Anthropic) are documented in section 03·5 of the site.
 
-**Stable capabilities, volatile technology.** Capability nodes change over 2–4 years; named technologies change over 6–18 months. Technologies are therefore kept in a separate register with a type and a status (S0 stable / S1 evolving / S2 volatile), so replacing a tool does not invalidate the capability tree.
+**Stable capabilities, volatile technology.** The time horizons shown in the atlas are maintenance-planning heuristics, not measured industry half-lives. Technologies are kept in a separate register with a type and an editorial review-priority status (S0 relatively stable / S1 evolving / S2 structurally volatile), so replacing a tool does not invalidate the capability tree.
 
 ## What is inside
 
@@ -32,7 +32,7 @@ Harness is treated as a cross-cutting lens rather than a separate tree.
 - **Domain forest and coverage matrix** — every branch mapped to its domain and to the target depth (P1–P4) for Platform, Agentic, and Adjacent roles.
 - **Operating views** — lifecycle stages with exit conditions, data/control/management plane responsibilities, and autonomy levels R0–R4.
 - **Harness lens** — loop/termination, model/prompt contract, tools/skills, context/memory, execution/recovery, and evaluation/telemetry.
-- **Technology register** — 86 entries filterable by type, each tied to the capability node it supports.
+- **Technology register** — 86 entries filterable by type, each tied to a concrete capability ID and through it to a branch and domain.
 - **JD evidence** — visibility counts across 25 target roles, with a 22-role core sensitivity view and explicit `BROAD` / `LITERAL` labels.
 - **Migration matrix** — 15 traditional SWE capabilities mapped to their Agent-era counterparts with a fidelity rating.
 - **Interview signal table** — JD language translated into likely interview questions and the evidence to prepare.
@@ -55,7 +55,7 @@ Harness is treated as a cross-cutting lens rather than a separate tree.
    - `TREES` — branches and capability nodes;
    - `DOMAINS` — the canonical domain spine (every branch must appear exactly once);
    - `COVER` — target depth per branch per role;
-   - `TECH` — the technology register, keyed to capability nodes;
+   - `TECH` — the technology register; its third field must be a valid capability ID such as `A3-2`;
    - `SOURCES` — primary sources referenced by key.
 2. If the JD corpus changes, rerun the analysis:
 
@@ -85,6 +85,8 @@ The JD corpus itself is not included in this repository. The analysis script, so
 
 - **Add capability before technology.** A new tool goes into `TECH`. Only change `TREES` when a technology alters what the capability *is* — for example, a genuinely new isolation primitive.
 - **Every branch needs exactly one domain.** The forest and the coverage matrix are generated from `DOMAINS`; a missing or duplicated branch breaks both.
+- **Keep capability IDs stable.** `A3-2` means branch A3, capability 2. Do not renumber existing capabilities when inserting content; append new IDs or explicitly migrate every register reference.
+- **Validate every technology mapping.** Every `TECH` row must point to an existing capability ID, not merely a branch. Its domain is derived through that capability.
 - **Depth, not ownership, expresses importance.** If a field matters to a role, raise its level in `COVER` rather than giving it its own tree.
 - Keep protocol and framework claims tied to primary sources; these facts change quickly.
 - Record the source date when adding version-sensitive material.
