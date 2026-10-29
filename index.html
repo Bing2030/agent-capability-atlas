@@ -57,7 +57,7 @@
 .st{font:9px var(--mono);white-space:nowrap}.st.s0{color:var(--c)}.st.s1{color:var(--warn)}.st.s2{color:#9a4a3a}
 @media(max-width:900px){.frow{grid-template-columns:44px minmax(0,1fr) 62px}.fbr{grid-column:2;border-left:0;padding-top:0}.fct{grid-row:1/3;grid-column:3}.plv{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.frow{grid-template-columns:38px minmax(0,1fr)}.fct{grid-row:auto;grid-column:2;text-align:left;border-left:0;padding-top:0}.plv{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.stat:nth-child(odd){border-right:1px solid var(--line)}.stat:last-child{border-bottom:0}.tablewrap table{min-width:680px}}
-@media print{body{background:#fff;font-size:11px}aside,#prog,.tools{display:none!important}main{margin:0}.wrap{max-width:none;padding:0}.hero{padding-top:0}section{padding-top:25px}.card,.level,.lay,.leaf,.callout,tr{break-inside:avoid}.branch{break-inside:auto}.dt{display:grid!important}.leaf.open .dt{display:grid}.tw{display:none}.lb{grid-template-columns:minmax(0,1fr) auto}.nm{grid-column:1}.jd{grid-column:2}.refs a{color:#333;text-decoration:none}.printonly{display:block}a{color:inherit;text-decoration:none}.chart,.branch,.card,.stack{box-shadow:none}}
+@media print{body{background:#fff;font-size:11px}aside,#prog,.tools{display:none!important}main{margin:0}.wrap{max-width:none;padding:0}.hero{padding-top:0}section{padding-top:25px}.card,.level,.lay,.leaf,.callout,tr{break-inside:avoid}.branch{break-inside:auto}.bh{break-after:avoid}.dt{display:grid!important}.leaf.open .dt{display:grid}.tw{display:none}.lb{grid-template-columns:minmax(0,1fr) auto}.nm{grid-column:1}.jd{grid-column:2}.refs a{color:#333;text-decoration:none}.printonly{display:block}a{color:inherit;text-decoration:none}.chart,.branch,.card,.stack{box-shadow:none}}
 </style>
 </head>
 <body>
@@ -67,19 +67,19 @@
   <nav>
     <a href="#s01"><span>01</span>执行摘要与使用方式</a><a href="#s02"><span>02</span>JD 证据与纠错</a><a href="#s03"><span>03</span>系统全景与责任接口</a><a href="#s03c"><span>03·5</span>能力图与领域森林</a><a href="#s03d"><span>03·6</span>运行视图：阶段 / 平面 / 自治</a><a href="#s03b"><span>03·7</span>Harness 视图</a><a href="#s04"><span>04</span>A · 平台工程能力树</a><a href="#s05"><span>05</span>B · Agentic 工程能力树</a><a href="#s06"><span>06</span>C · 相邻专业</a><a href="#s07"><span>07</span>迁移与面试信号</a><a href="#s08"><span>08</span>成熟度与作品集</a><a href="#s09"><span>09</span>选型与反模式</a><a href="#s10"><span>10</span>技术登记册</a><a href="#s11"><span>11</span>来源与方法</a>
   </nav>
-  <div class="sidefoot">CORPUS: 25 JD / CORE VIEW: 22<br>UPDATED: 2026-10-29<br>9 DOMAINS + 1 CROSS-CUTTING<br>PRIMARY-SOURCE FIRST</div>
+  <div class="sidefoot">CORPUS: 25 JD / CORE VIEW: 22<br>UPDATED: 2026-10-29<br>9 DOMAINS + 2 CROSS-CUTTING<br>PRIMARY-SOURCE FIRST</div>
 </aside>
 <main><div class="wrap">
 <header class="hero">
-  <div class="eyebrow">9 CAPABILITY DOMAINS · 6 VIEWS · 18 BRANCHES · 75 NODES</div>
+  <div class="eyebrow">9 CAPABILITY DOMAINS · 2 CROSS-CUTTING BANDS · 6 VIEWS · 19 BRANCHES · 80 NODES</div>
   <h1>Agent 技术能力地图<br><em>决策级参考版</em></h1>
   <p class="lede">给传统软件工程师的一张可执行地图：从熟悉的契约、隔离、调度、检索、可观测性出发，理解 Agent 平台、Agentic 应用、Harness、模型系统与后训练之间的完整边界。全图只有一个能力图，用六个视图投影：分层、领域森林、生命周期、控制面、自治等级、角色。每个能力节点下挂实践与技术项，技术项单独登记、随时可换。</p>
   <div class="meta"><span>CORPUS SHA256 dac3b442…f79</span><span>VISIBILITY ≠ REQUIREMENT</span><span>EXAMPLES ≠ UNIVERSAL THRESHOLDS</span><span>CAPABILITY STABLE / TECHNOLOGY VOLATILE</span></div>
-  <div class="stats"><div class="stat"><b>9 + 1</b><span>能力域（含 1 个横切）</span></div><div class="stat"><b id="branchCount">18</b><span>能力分支</span></div><div class="stat"><b id="nodeCount">—</b><span>可追溯能力节点</span></div><div class="stat"><b id="techCount">—</b><span>登记技术项</span></div><div class="stat"><b id="sourceCount">—</b><span>一手来源入口</span></div></div>
+  <div class="stats"><div class="stat"><b>9 + 2</b><span>能力域（含 2 个横切带）</span></div><div class="stat"><b id="branchCount">19</b><span>能力分支</span></div><div class="stat"><b id="nodeCount">—</b><span>可追溯能力节点</span></div><div class="stat"><b id="techCount">—</b><span>登记技术项</span></div><div class="stat"><b id="sourceCount">—</b><span>一手来源入口</span></div></div>
 </header>
 <section id="s01">
   <div class="kicker">01 / SCOPE & READING GUIDE</div><h2>这不是岗位分类学，而是工程责任地图</h2>
-  <div class="callout green"><strong>本图的定位：</strong>把「证据、全景、行动」放在同一张图上。能力按 <b>9 个域 + 1 个横切带</b>组织；A / B / C 是同一份能力数据的<strong>角色投影</strong>，用 P1–P4 表达深度，而不是用归属表达重要性。Harness 作为横切镜头单独展开。真实岗位经常混合这些责任，尤其是 Harness、平台架构师与负责人岗。</div>
+  <div class="callout green"><strong>本图的定位：</strong>把「证据、全景、行动」放在同一张图上。能力按 <b>9 个域 + 2 个横切带</b>组织；A / B / C 是同一份能力数据的<strong>角色投影</strong>，用 P1–P4 表达深度，而不是用归属表达重要性。Harness 既是横切镜头（03·7），也已落成能力树中的一等分支 <b>B9</b>。真实岗位经常混合这些责任，尤其是 Harness、平台架构师与负责人岗。</div>
   <h3>先读这五条</h3>
   <div class="grid3">
     <div class="card a"><h3>01 · 评测是工程，不是刷榜</h3><p>15/25 岗提及评测，但原文要的是任务集、badcase 归因、回归和线上闭环。能读懂一条失败轨迹，比会背一个榜单分数更值钱。</p></div>
@@ -127,7 +127,7 @@
     <tr><td><b>④ 控制面</b></td><td>它属于数据面还是控制面，原语是什么</td><td>平面 + 平台原语</td><td>平台架构、权限与成本设计</td><td class="mono"><a href="#s03d">03·6</a></td></tr>
     <tr><td><b>⑤ 自治等级</b></td><td>需要多强的监督与治理</td><td>R0–R4</td><td>风险分级、审批与接管设计</td><td class="mono"><a href="#s03d">03·6</a></td></tr>
     <tr><td><b>⑥ 角色</b></td><td>我这类岗位该深入到哪一层</td><td>A / B / C × P1–P4 深度</td><td>选岗、面试、团队梯队</td><td class="mono"><a href="#s04">04–06</a></td></tr>
-    <tr><td><b>✳ Harness</b></td><td>一次任务如何被组织成可交付行为</td><td>六个组件 + 失效面</td><td>调试、设计评审、归因</td><td class="mono"><a href="#s03b">03·7</a></td></tr>
+    <tr><td><b>✳ Harness</b></td><td>一次任务如何被组织成可交付行为</td><td>六个组件 + 失效面</td><td>调试、设计评审、归因</td><td class="mono"><a href="#s03b">03·7</a> + <a href="#treeB">B9</a></td></tr>
   </table>
   <div class="callout green"><strong>为什么不维护六套分类法：</strong>六套并列的目录会立刻出现同名词条互相矛盾、更新不同步、读者无法定位。本图只维护一份能力数据（域 → 分支 → 能力）。领域森林与角色视图由它直接生成；分层、生命周期、平面和自治视图复用同一组分支编号交叉引用。技术项按能力编号单独登记，采用更短的复核周期。</div>
   <h3 style="margin-top:26px">按制品划分责任，而不是按岗位名称</h3>
@@ -146,7 +146,7 @@
 <section id="s03c">
   <div class="kicker">03·5 / CAPABILITY GRAPH</div><h2>域是主键，角色只是投影</h2>
   <p>上一节的分层视图回答「能力在系统哪里」，本节回答「能力本身怎么组织」。这两件事需要分开：分层是运行时拓扑，会随架构演进；能力域是知识结构，稳定得多。全图只维护一份能力数据，角色轨道（A/B/C）是从它派生出来的阅读投影。</p>
-  <div class="callout green"><strong>分类学结论：</strong>A / B / C 保留，但降级为<strong>角色投影</strong>，不再作为根节点。根节点改为<strong>能力域</strong>：9 个域 + 1 个横切带。原因不是「两分法错」，而是它把三种不同的轴压在了同一层——岗位角色（A/B）、系统责任（分层）、专业成熟度（「相邻」暗含次要）。一旦需要新增方向，这种结构就只能在「再加一棵树」和「塞进现有树」之间二选一。</div>
+  <div class="callout green"><strong>分类学结论：</strong>A / B / C 保留，但降级为<strong>角色投影</strong>，不再作为根节点。根节点改为<strong>能力域</strong>：9 个域 + 2 个横切带。原因不是「两分法错」，而是它把三种不同的轴压在了同一层——岗位角色（A/B）、系统责任（分层）、专业成熟度（「相邻」暗含次要）。一旦需要新增方向，这种结构就只能在「再加一棵树」和「塞进现有树」之间二选一。</div>
 
   <h3>为什么保留 A/B/C，但不把它当根节点</h3>
   <table><colgroup><col style="width:18%"><col style="width:40%"><col style="width:42%"></colgroup><tr><th>问题</th><th>具体现象</th><th>本图处理</th></tr>
@@ -174,10 +174,10 @@
   <h3>五级节点模型：森林 → 树 → 枝 → 叶 → 叶脉</h3>
   <p class="small">同一棵树上，越往下越具体、越易变、越需要一线判断。层级的存在意义是让你知道「该在哪一层做决策」。</p>
   <table><colgroup><col style="width:22%"><col style="width:13%"><col style="width:12%"><col style="width:30%"><col style="width:23%"></colgroup><tr><th>层级</th><th>数量</th><th>变化尺度*</th><th>例子</th><th>维护者</th></tr>
-    <tr><td><b>L1 域</b> Domain<span class="small"> · 森林</span></td><td class="mono">9 + 1 横切</td><td class="mono">5–10 年</td><td>执行与隔离、上下文与知识、模型系统</td><td>架构负责人</td></tr>
-    <tr><td><b>L2 分支</b> Branch<span class="small"> · 树</span></td><td class="mono">18</td><td class="mono">3–5 年</td><td>不受信执行与环境（A1）</td><td>方向 owner</td></tr>
-    <tr><td><b>L3 能力</b> Capability<span class="small"> · 枝</span></td><td class="mono">75</td><td class="mono">2–4 年</td><td>威胁模型与隔离分级</td><td>团队 tech lead</td></tr>
-    <tr><td><b>L4 实践</b> Practice<span class="small"> · 叶</span></td><td class="mono">嵌入 75 个能力</td><td class="mono">1–2 年</td><td>出口默认拒绝、凭证代理、按序列判定权限</td><td>一线工程师</td></tr>
+    <tr><td><b>L1 域</b> Domain<span class="small"> · 森林</span></td><td class="mono">9 + 2 横切</td><td class="mono">5–10 年</td><td>执行与隔离、上下文与知识、模型系统</td><td>架构负责人</td></tr>
+    <tr><td><b>L2 分支</b> Branch<span class="small"> · 树</span></td><td class="mono">19</td><td class="mono">3–5 年</td><td>不受信执行与环境（A1）</td><td>方向 owner</td></tr>
+    <tr><td><b>L3 能力</b> Capability<span class="small"> · 枝</span></td><td class="mono">80</td><td class="mono">2–4 年</td><td>威胁模型与隔离分级</td><td>团队 tech lead</td></tr>
+    <tr><td><b>L4 实践</b> Practice<span class="small"> · 叶</span></td><td class="mono">嵌入 80 个能力</td><td class="mono">1–2 年</td><td>出口默认拒绝、凭证代理、按序列判定权限</td><td>一线工程师</td></tr>
     <tr><td><b>L5 技术项</b> Technology<span class="small"> · 叶脉</span></td><td class="mono" id="techCountInline">—</td><td class="mono">6–18 个月</td><td>Firecracker / gVisor / Kata / Temporal</td><td>平台或基础设施团队</td></tr>
   </table>
   <p class="small">* 变化尺度是维护规划假设，不是经行业测量得出的半衰期。实践层目前嵌入每个能力的传统锚点、示例验收与关键技术字段，不冒充独立编目的实践库；技术登记册则精确索引到能力编号。</p>
@@ -191,7 +191,7 @@
     <div class="level"><h3>P4 · 权威</h3><p>能制定标准与取舍框架，能处理无先例问题，能培养 P3，并对组织级接口负责。</p></div>
   </div>
 
-  <h3 style="margin-top:26px">领域森林：9 个域 + 1 个横切带</h3>
+  <h3 style="margin-top:26px">领域森林：9 个域 + 2 个横切带</h3>
   <p class="small">每个域下列出所属分支与节点数。<span class="fcode" style="border:0">D0</span> 是横切带：它不属于任何单一域，而是所有域的约束条件。</p>
   <div class="forest" id="forest"></div>
 
@@ -237,6 +237,7 @@
 <section id="s03b">
   <div class="kicker">03·7 / HARNESS LENS</div><h2>Harness：把模型能力组织成可交付行为</h2>
   <p>Harness 不是某个框架，也不是 Prompt wrapper，而是「从目标到最终环境状态」的运行时组织。它把模型、工具、上下文、状态、执行环境和反馈组织成可交付行为。</p>
+  <p class="small">本页是跨域读法。其中「把 Harness 自身当作工程对象」的五个能力已落成能力树分支 <a href="#treeB">B9 Harness 工程</a>（D10 横切带），本页不重复展开细节。</p>
   <div class="callout green"><strong>一句话：</strong>模型决定「可能做什么」，Harness 决定「这次实际做什么、做完没有、失败怎么办」。对多数应用团队，模型是外部依赖，Harness 才是可控制、可评测、可迭代的工程对象。</div>
   <div class="grid3">
     <div class="card b"><h3>01 · Loop &amp; termination</h3><p>目标、计划、行动、观察、停止条件、预算与人工接管。主责 B；运行时执行点由 A 提供。</p><p class="small"><span class="pill pb">B</span> 制品：循环策略 + 终止原因 + 运行清单</p></div>
@@ -358,7 +359,7 @@
 <section id="s11">
   <div class="kicker">11 / SOURCES & REPRODUCIBILITY</div><h2>来源登记：一条事实对应一类证据</h2>
   <p>所有链接均为规范、官方文档、官方工程文章或官方代码/基准仓库。这里不使用二手文章支撑协议状态、产品功能或性能常数。访问日期：2026-10-28；链接复核：2026-10-29。</p>
-  <div class="callout green"><strong>文档约定：</strong>全图只有一份能力数据（9 个域 + 1 个横切带 / 18 个分支 / 75 个能力节点），用六个视图投影：分层、领域森林、生命周期、控制面、自治等级、角色；Harness 为横切镜头。技术项单独登记（86 条，标注类型与状态）。每个能力节点都附 JD 编号与一手技术入口，另有 15 行迁移矩阵与面试信号表。</div>
+  <div class="callout green"><strong>文档约定：</strong>全图只有一份能力数据（9 个域 + 2 个横切带 / 19 个分支 / 80 个能力节点），用六个视图投影：分层、领域森林、生命周期、控制面、自治等级、角色；Harness 为横切镜头，并落成 B9 分支。技术项单独登记（92 条，标注类型与状态）。每个能力节点都附 JD 编号或来源标注与一手技术入口，另有 15 行迁移矩阵与面试信号表。</div>
   <div class="tablewrap"><table class="srcs" id="sourceTable"><colgroup><col style="width:14%"><col style="width:25%"><col style="width:14%"><col style="width:47%"></colgroup><tr><th>ID</th><th>来源</th><th>类型</th><th>用于支撑</th></tr></table></div>
   <h3>JD 方法的可复现边界</h3>
   <div class="callout"><strong>运行：</strong><span class="mono">python3 jd-capability-evidence.py 目标JD标准库-Agent平台与负责人岗.md --pretty</span><br>脚本包含完整正则、岗位编号、核心视图排除项和限制说明。语料 SHA-256 为 <span class="mono">dac3b44268f2eab14bf2561c5399392b21cf8f0128abee9adfb6efc925738f79</span>。若 JD 文件改变，图表必须重新生成。</div>
@@ -510,6 +511,13 @@ B:[
 ["Skill 与经验学习","Skill & experience learning","从成功/失败轨迹提炼可复用流程，但必须经过审查、版本化、权限和效果验证。","知识蒸馏、规则挖掘、资产化","候选 Skill 在保留任务集上证明净收益，误触发、冲突和撤回路径均被测试。","Skill mining / trajectory mining / registry","#1 #13 #16",["skills","eval"]],
 ["有边界的自改进","Bounded self-improvement","自动修改 Prompt、工具或策略需要离线验证、审批、灰度和回滚；不能无边界自我扩权。","AutoML、配置优化、变更管理","系统提出改进候选但不直接获得生产权限；所有变更可定位、可复现、可撤回。","Prompt/config optimization / gated rollout","#1 #13 #16 #17",["eval","owasp"]],
 ["Spec Coding 与 AI 协作研发","Spec-driven AI coding","把需求、架构、测试、代码审查和证据变成 Agent 可执行且人可评审的工程制品。","SDLC、规格驱动开发、代码评审","AI 生成变更必须通过规格、测试、安全审查与人工责任；评估返工和缺陷，而非只统计生成速度。","Spec Coding / AGENTS.md / eval-driven development","#2 #3 #7 #12 #13 #14 #17 #20",["eval","owasp"]]
+]},
+{code:"B9",name:"Harness 工程",en:"Harness engineering",heat:"Harness 6/25",desc:"把 Harness 当成可设计、可实验、可回归的工程对象：先定边界与失效面，再用前馈和反馈收紧。节点来自一手文档与工程实践，不冒充 JD 原文。",leaves:[
+["Harness 边界与组件契约","Harness boundary & contract","划分模型、Harness 与环境的边界，把执行循环、工具注册、上下文管理、状态存储、生命周期钩子与评测接口写成可替换契约。","系统边界、端口-适配器、接口契约","换掉执行循环或上下文管理实现时，其余组件不改仍能跑通；失败复盘能指认问题落在哪个组件。","组件契约 / 配置清单 / 适配器","—",["claude","aws"]],
+["前馈与反馈控制","Feedforward & feedback","把约束前置成模型可见的规则、类型与示例，把验证后置成测试、lint 与评测；能用确定性检查就不用模型判断。","静态检查、类型系统、CI 门禁、契约测试","每条前馈规则都有对应传感器；违规由工具自动拦回循环，而不是靠人工 review 发现。","Rules / type check / generated tests / lint","—",["claude","eval"]],
+["Harness 实验化与归因","Harness as an experiment","把工具集、上下文策略、循环拓扑与权限当作实验变量，固定模型比较配置差异；否则模型升级与脚手架改动混在一起，无法解释质量变化。","A/B 实验、配置版本化、对照实验","固定同一模型，只改工具描述或上下文策略，在留出任务上报告质量、成本、延迟与置信区间。","Config versioning / held-out set / repeat trials","—",["swebench","eval"]],
+["循环工程与终止升级","Loop engineering & escalation","设计计划—执行—验证—修复的外层循环：回合预算、停止条件、循环检测与人工升级路径；只设最大步数不算终止语义。","状态机、超时重试、熔断、告警升级","注入重复动作、工具持续失败、目标不可达三类故障，循环都在预算内停止并给出可读终止原因。","State machine / budget / termination reason","—",["temporal","aws"]],
+["有边界的 Harness 自演化","Bounded harness self-evolution","让 Agent 提出对 Harness 代码、工具与循环的修改，但必须在隔离分支生成、在留出任务上验证、过门禁后合入并可回滚。与 B8-3 的分工：B8-3 改知识与 Skill，本节点改可执行脚手架。","变更管理、代码评审、灰度与回滚","自演化提案附带变更前后对照、影响范围与回滚点；未通过留出集不进入生产。","Change branch / regression gate / reversible rollout","—",["aws","eval"]]
 ]}
 ],
 C:[
@@ -542,9 +550,10 @@ const DOMAINS=[
 {code:"D6",name:"运行、可观测与成本",en:"OPERATIONS & ECONOMICS",desc:"以轨迹为调试单位，以成功任务为经营单位。",branches:["A6"]},
 {code:"D7",name:"平台控制面与开发体验",en:"CONTROL PLANE & DX",desc:"把单点复杂度变成可复用、可迁移、可运维的平台制品。",branches:["A4"]},
 {code:"D8",name:"模型系统",en:"MODEL SYSTEMS",desc:"推理服务、后训练与 Harness 之间的能力与成本边界。",branches:["C1","C2"]},
-{code:"D9",name:"产品、交互与组织",en:"PRODUCT & ORGANIZATION",desc:"价值、信任、采用与责任由真实流程决定，不由 Agent 步数决定。",branches:["B7","B8","C3"]}
+{code:"D9",name:"产品、交互与组织",en:"PRODUCT & ORGANIZATION",desc:"价值、信任、采用与责任由真实流程决定，不由 Agent 步数决定。",branches:["B7","B8","C3"]},
+{code:"D10",name:"Harness 工程",en:"HARNESS ENGINEERING",cross:true,desc:"横切执行、工具、上下文、状态、评测与治理，但不重复这些域的具体能力：这里只放「如何把 Harness 本身工程化」。",branches:["B9"]}
 ];
-const COVER={A1:["P4","P2","P1"],A2:["P4","P2","P1"],A3:["P4","P3","P1"],A4:["P4","P2","P1"],A5:["P3","P2","P2"],A6:["P4","P3","P1"],A7:["P3","P3","P1"],B1:["P1","P4","P2"],B2:["P2","P4","P1"],B3:["P2","P4","P2"],B4:["P3","P4","P2"],B5:["P3","P4","P1"],B6:["P2","P4","P2"],B7:["P1","P3","P3"],B8:["P2","P3","P2"],C1:["P2","P2","P4"],C2:["P1","P2","P4"],C3:["P1","P2","P4"]};
+const COVER={A1:["P4","P2","P1"],A2:["P4","P2","P1"],A3:["P4","P3","P1"],A4:["P4","P2","P1"],A5:["P3","P2","P2"],A6:["P4","P3","P1"],A7:["P3","P3","P1"],B1:["P1","P4","P2"],B2:["P2","P4","P1"],B3:["P2","P4","P2"],B4:["P3","P4","P2"],B5:["P3","P4","P1"],B6:["P2","P4","P2"],B7:["P1","P3","P3"],B8:["P2","P3","P2"],B9:["P2","P4","P1"],C1:["P2","P2","P4"],C2:["P1","P2","P4"],C3:["P1","P2","P4"]};
 const TECH=[
 ["OWASP AI Agent & MCP Security","pr","A5-2","S0","最小自治、间接注入与工具供应链的基线清单","owasp"],
 ["OPA / Rego","rt","A5-2","S0","策略即代码；序列策略需额外上下文","opf"],
@@ -631,11 +640,17 @@ const TECH=[
 ["ROI / TCO / 退出成本","pr","C3-2","S0","包含迁移、运维与供应商锁定"],
 ["RACI 与团队拓扑","pr","C3-3","S0","关键制品必须有唯一 accountable owner"],
 ["ISO/IEC 42001","spec","C3-4","S0","AI 管理体系与生命周期要求","iso"],
-["SFIA 9 责任等级","spec","C3-3","S0","用自主性与影响定义等级，而非职级名称","sfia"]
+["SFIA 9 责任等级","spec","C3-3","S0","用自主性与影响定义等级，而非职级名称","sfia"],
+["Harness 组件契约","pr","B9-1","S1","循环、工具、上下文、状态、钩子与评测接口写成可替换契约"],
+["前馈-反馈配对","pr","B9-2","S0","每条规则有对应传感器；确定性检查优先于模型判断"],
+["Harness 配置版本化","pr","B9-3","S1","工具集、上下文策略与循环拓扑随发布一起版本化"],
+["终止原因与预算枚举","pr","B9-4","S0","终止必须可解释，而不是只设最大步数"],
+["Harness 变更 held-out 门禁","pr","B9-5","S1","自演化提案先在留出任务上对照，再合入并可回滚"],
+["Claude Agent SDK（Harness 参考实现）","fw","B9-1","S1","成熟的组件划分与工具权限模型","claude"]
 ];
 function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function refs(keys){return keys.map(k=>{const s=SOURCES[k];return s?'<a href="'+esc(s.url)+'" target="_blank" rel="noreferrer">'+esc(s.name)+' ↗</a>':""}).join("")}
-function renderTree(track){const root=document.getElementById("tree"+track);root.innerHTML=TREES[track].map(b=>'<article class="branch '+track+'" data-search="'+esc((b.code+" "+b.name+" "+b.en+" "+b.desc).toLowerCase())+'"><div class="bh"><div class="code">'+b.code+'</div><div><div class="bt">'+esc(b.name)+' <span class="small">'+esc(b.en)+'</span></div><div class="bd">'+esc(b.desc)+'</div></div><div class="heat">'+(BR2DOM[b.code]||"")+' · '+esc(b.heat)+'<br>'+b.leaves.length+' NODES</div></div>'+b.leaves.map((l,i)=>{const id=b.code+"-"+(i+1);return '<div class="leaf" id="cap-'+id+'" data-search="'+esc((id+" "+l[0]+" "+l[1]+" "+l[2]+" "+l[3]+" "+l[4]+" "+l[5]).toLowerCase())+'"><button class="lb" aria-expanded="false" aria-controls="'+id+'"><span class="tw">▶</span><span class="nm">'+esc(l[0])+'<span>'+id+' · '+esc(l[1])+'</span></span><span class="jd">JD '+esc(l[6])+'</span></button><div class="dt" id="'+id+'"><div><div class="dl">是什么 / WHY</div><div class="dcopy">'+esc(l[2])+'</div></div><div><div class="dl">传统锚点 / ANCHOR</div><div class="dcopy">'+esc(l[3])+'</div></div><div><div class="dl">示例验收 / EVIDENCE</div><div class="dcopy">'+esc(l[4])+'</div></div><div><div class="dl">关键技术 / TECH</div><div class="dcopy">'+esc(l[5])+'</div></div><div class="refs">JD '+esc(l[6])+(l[7].length?' · Sources '+refs(l[7]):"")+'</div></div></div>'}).join("")+'</article>').join("")}
+function renderTree(track){const root=document.getElementById("tree"+track);root.innerHTML=TREES[track].map(b=>'<article class="branch '+track+'" data-search="'+esc((b.code+" "+b.name+" "+b.en+" "+b.desc).toLowerCase())+'"><div class="bh"><div class="code">'+b.code+'</div><div><div class="bt">'+esc(b.name)+' <span class="small">'+esc(b.en)+'</span></div><div class="bd">'+esc(b.desc)+'</div></div><div class="heat">'+(BR2DOM[b.code]||"")+' · '+esc(b.heat)+'<br>'+b.leaves.length+' NODES</div></div>'+b.leaves.map((l,i)=>{const id=b.code+"-"+(i+1);return '<div class="leaf" id="cap-'+id+'" data-search="'+esc((id+" "+l[0]+" "+l[1]+" "+l[2]+" "+l[3]+" "+l[4]+" "+l[5]).toLowerCase())+'"><button class="lb" aria-expanded="false" aria-controls="'+id+'"><span class="tw">▶</span><span class="nm">'+esc(l[0])+'<span>'+id+' · '+esc(l[1])+'</span></span><span class="jd">'+(l[6]==="—"?"SRC":"JD "+esc(l[6]))+'</span></button><div class="dt" id="'+id+'"><div><div class="dl">是什么 / WHY</div><div class="dcopy">'+esc(l[2])+'</div></div><div><div class="dl">传统锚点 / ANCHOR</div><div class="dcopy">'+esc(l[3])+'</div></div><div><div class="dl">示例验收 / EVIDENCE</div><div class="dcopy">'+esc(l[4])+'</div></div><div><div class="dl">关键技术 / TECH</div><div class="dcopy">'+esc(l[5])+'</div></div><div class="refs">'+(l[6]==="—"?"来源驱动":"JD "+esc(l[6]))+(l[7].length?' · Sources '+refs(l[7]):"")+'</div></div></div>'}).join("")+'</article>').join("")}
 const BR={};Object.entries(TREES).forEach(([t,bs])=>bs.forEach(b=>BR[b.code]={b,t}));
 const BR2DOM={};DOMAINS.forEach(d=>d.branches.forEach(c=>BR2DOM[c]=d.code));
 const CAP={};Object.values(TREES).flat().forEach(b=>b.leaves.forEach((l,i)=>{const id=b.code+"-"+(i+1);CAP[id]={branch:b.code,name:l[0]}}));
