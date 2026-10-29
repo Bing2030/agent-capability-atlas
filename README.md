@@ -6,16 +6,33 @@ A decision-grade capability map for engineers moving into **Agent Platform Engin
 
 This is a living reference. The HTML is intentionally self-contained and the evidence is reproducible; updates can be made directly in the repository and published through GitHub Pages.
 
+## How it is organised
+
+One capability graph, six views. The graph is the source of truth; every other view is a projection of it, so node codes (A1, B6, C2 …) stay stable wherever you read them.
+
+| View | Answers | Key |
+|---|---|---|
+| Layers | Where in the runtime does this capability sit, who owns it | L0–L8 |
+| Domain forest | Which domain does it belong to, what sits below it | domain → branch → capability → practice → technology |
+| Lifecycle | Which stage needs it, what is the exit condition | frame → build → evaluate → release → operate → learn → govern |
+| Control plane | Is it data plane or control plane, what primitive is it | plane + platform primitive |
+| Autonomy level | How much supervision and governance is required | R0–R4 |
+| Role | How deep should someone in this role go | A / B / C × P1–P4 |
+
+Harness is treated as a cross-cutting lens rather than a separate tree.
+
+**Why not two trees.** The original Platform / Agentic split mixed three different axes on one level: job role, system responsibility, and professional maturity ("adjacent" implies secondary). It also split co-owned work — tool contracts (A3) and tool semantics (B5) — into different trees. Capability domains are now the spine; A/B/C survive as a role projection with explicit depth levels. The reasoning and the frameworks that informed it (CNCF platform engineering, NIST AI RMF, ISO/IEC 42001, AWS AgentOps, SFIA, NICE, Anthropic) are documented in section 03·5 of the site.
+
+**Stable capabilities, volatile technology.** Capability nodes change over 2–4 years; named technologies change over 6–18 months. Technologies are therefore kept in a separate register with a type and a status (S0 stable / S1 evolving / S2 volatile), so replacing a tool does not invalidate the capability tree.
+
 ## What is inside
 
-- **Two core tracks** — Agent Platform Engineering and Agentic AI Engineering — plus three adjacent specializations: model serving/inference, post-training/Agentic RL, and product/organizational leadership.
-- **18 branches and 75 capability nodes**, each with:
-  - what the capability is;
-  - a traditional software-engineering anchor;
-  - an example acceptance exercise;
-  - key technologies;
-  - related JD references and primary-source links.
+- **9 capability domains + 1 cross-cutting band**, 18 branches, 75 capability nodes, 86 registered technologies.
+- **Each capability node** carries: what it is, a traditional software-engineering anchor, an example acceptance exercise, key technologies, related JD references, and primary-source links.
+- **Domain forest and coverage matrix** — every branch mapped to its domain and to the target depth (P1–P4) for Platform, Agentic, and Adjacent roles.
+- **Operating views** — lifecycle stages with exit conditions, data/control/management plane responsibilities, and autonomy levels R0–R4.
 - **Harness lens** — loop/termination, model/prompt contract, tools/skills, context/memory, execution/recovery, and evaluation/telemetry.
+- **Technology register** — 86 entries filterable by type, each tied to the capability node it supports.
 - **JD evidence** — visibility counts across 25 target roles, with a 22-role core sensitivity view and explicit `BROAD` / `LITERAL` labels.
 - **Migration matrix** — 15 traditional SWE capabilities mapped to their Agent-era counterparts with a fidelity rating.
 - **Interview signal table** — JD language translated into likely interview questions and the evidence to prepare.
@@ -34,7 +51,12 @@ This is a living reference. The HTML is intentionally self-contained and the evi
 
 ## Updating the map
 
-1. Edit the content and capability data in `index.html`. The capability trees, evidence rows, and source register are defined near the bottom of the file.
+1. Edit the content and capability data in `index.html`. The data lives near the bottom of the file:
+   - `TREES` — branches and capability nodes;
+   - `DOMAINS` — the canonical domain spine (every branch must appear exactly once);
+   - `COVER` — target depth per branch per role;
+   - `TECH` — the technology register, keyed to capability nodes;
+   - `SOURCES` — primary sources referenced by key.
 2. If the JD corpus changes, rerun the analysis:
 
 ```bash
@@ -61,11 +83,13 @@ The JD corpus itself is not included in this repository. The analysis script, so
 
 ## Maintaining the site
 
-- Keep the title and metadata in `index.html` current.
+- **Add capability before technology.** A new tool goes into `TECH`. Only change `TREES` when a technology alters what the capability *is* — for example, a genuinely new isolation primitive.
+- **Every branch needs exactly one domain.** The forest and the coverage matrix are generated from `DOMAINS`; a missing or duplicated branch breaks both.
+- **Depth, not ownership, expresses importance.** If a field matters to a role, raise its level in `COVER` rather than giving it its own tree.
 - Keep protocol and framework claims tied to primary sources; these facts change quickly.
 - Record the source date when adding version-sensitive material.
-- Prefer adding a capability node or a source over adding a generic claim.
-- Preserve the distinction between Platform responsibilities, Agentic behavior, and adjacent model-system work.
+- If a source cannot be fetched by a script but loads in a browser (ISO, SFIA), say so rather than implying it was automatically verified.
+- Preserve the distinction between capability (stable) and technology (replaceable).
 
 ## Repository
 
